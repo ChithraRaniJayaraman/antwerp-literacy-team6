@@ -17,88 +17,104 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #e9e9e9;
+      background: #e8e8e8;
       color: #111;
       overflow-x: hidden;
     }
 
     img {
-      display: block;
       max-width: 100%;
+      display: block;
     }
 
     section {
-      padding: 70px 18px;
+      padding: 60px 18px;
       display: flex;
       justify-content: center;
     }
 
-    .wrapper {
+    .page {
       width: 100%;
       max-width: 1220px;
+      background: #efefef;
       position: relative;
       overflow: hidden;
-      background: #efefef;
       border-radius: 12px;
+      min-height: 90vh;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
     .inner {
-      padding: 48px;
       position: relative;
       z-index: 2;
+      padding: 42px 44px;
     }
 
     .curve {
       position: absolute;
-      border: 12px solid rgba(126, 150, 126, 0.14);
+      border: 12px solid rgba(118, 140, 118, 0.12);
       border-radius: 999px;
       z-index: 1;
       pointer-events: none;
     }
 
     .curve.one {
-      width: 420px;
-      height: 420px;
-      left: -70px;
-      top: -110px;
+      width: 380px;
+      height: 380px;
+      top: -100px;
+      left: 110px;
     }
 
     .curve.two {
-      width: 340px;
-      height: 340px;
-      right: -80px;
-      bottom: -70px;
+      width: 330px;
+      height: 330px;
+      right: -50px;
+      top: 110px;
     }
 
     .curve.three {
-      width: 260px;
-      height: 260px;
-      right: -30px;
-      top: 100px;
+      width: 300px;
+      height: 300px;
+      right: -70px;
+      bottom: -80px;
     }
 
-    .hero {
-      min-height: 100vh;
-      align-items: center;
+    .curve.four {
+      width: 280px;
+      height: 280px;
+      left: -80px;
+      bottom: -120px;
+    }
+
+    .top-logo {
+      position: absolute;
+      right: 42px;
+      top: 22px;
+      width: 90px;
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      z-index: 3;
     }
 
     .hero-grid {
+      min-height: 78vh;
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
+      gap: 34px;
       align-items: center;
     }
 
-    .title {
-      font-size: 4.4rem;
-      line-height: 1.03;
+    .hero-title {
+      font-size: 4.2rem;
+      line-height: 1.02;
       font-weight: 800;
-      color: #ff3a36;
-      margin-bottom: 28px;
+      color: #ff3936;
+      margin-bottom: 26px;
     }
 
-    .subtitle {
-      font-size: 2.35rem;
+    .hero-subtitle {
+      font-size: 2.25rem;
       line-height: 1.18;
       font-weight: 800;
       color: #111;
@@ -107,106 +123,108 @@
 
     .team-box {
       display: inline-block;
-      border: 2px solid #617d5f;
-      color: #6d876a;
-      padding: 22px 34px;
+      border: 2px solid #617a5c;
+      color: #708867;
       border-radius: 10px;
+      padding: 20px 34px;
       font-size: 1.05rem;
-      font-weight: 700;
       line-height: 1.6;
-      background: rgba(255,255,255,0.12);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+      font-weight: 700;
+      background: rgba(255,255,255,0.10);
     }
 
     .hero-right {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 22px;
+      justify-content: center;
+      align-items: center;
     }
 
-    .vub-box {
-      width: 108px;
-      background: #fff;
-      padding: 10px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-    }
-
-    .vub-box img {
+    .hero-map {
       width: 100%;
-      height: auto;
-    }
-
-    .map-card {
-      width: 100%;
-      max-width: 430px;
-      background: #fff;
-      border-radius: 28px;
+      max-width: 420px;
+      border-radius: 32px;
       overflow: hidden;
       box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-      transform: rotate(-1deg);
+      background: #fff;
     }
 
-    .map-card img {
+    .hero-map img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
     }
 
     .section-title {
+      text-align: center;
       font-size: 3rem;
       font-weight: 800;
-      text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 26px;
     }
 
     .text-block {
-      max-width: 980px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      line-height: 1.85;
+      font-size: 1.08rem;
+      line-height: 1.8;
       font-weight: 600;
-      color: #262626;
+      color: #242424;
     }
 
     .text-block p {
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
 
     .context-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
       align-items: center;
+      min-height: 72vh;
     }
 
     .context-image {
       justify-self: center;
+      width: 100%;
       max-width: 360px;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.10);
     }
 
-    .highlight-title {
+    .pill {
+      display: inline-block;
+      border: 2px solid #4d6f49;
+      color: #1f1f1f;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.2);
+      margin-bottom: 18px;
+    }
+
+    .arrow {
+      font-size: 4rem;
+      color: #426b43;
+      font-weight: 800;
+      letter-spacing: -6px;
+      line-height: 1;
+    }
+
+    .focus-head {
       text-align: center;
       margin-bottom: 34px;
     }
 
-    .highlight-title span {
-      display: inline-block;
-      border: 3px solid #8a52ff;
-      padding: 12px 28px;
-      font-size: 3rem;
+    .focus-head .pill {
+      margin-bottom: 22px;
+    }
+
+    .focus-title {
+      font-size: 3.4rem;
       font-weight: 800;
-      line-height: 1.1;
-      background: rgba(255,255,255,0.15);
+      line-height: 1.08;
     }
 
     .card-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 26px;
+      gap: 24px;
     }
 
     .card-grid.three {
@@ -214,12 +232,12 @@
     }
 
     .info-card {
-      background: #456d45;
-      color: white;
-      border-radius: 22px;
-      padding: 30px 22px;
-      min-height: 250px;
-      box-shadow: 0 14px 26px rgba(0,0,0,0.10);
+      background: #446d44;
+      color: #fff;
+      border-radius: 18px;
+      padding: 28px 20px;
+      min-height: 255px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.10);
       transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
@@ -229,72 +247,105 @@
     }
 
     .info-card h3 {
-      font-size: 1.55rem;
-      line-height: 1.25;
-      margin-bottom: 16px;
-      font-weight: 800;
       text-align: center;
+      font-size: 1.55rem;
+      line-height: 1.2;
+      font-weight: 800;
+      margin-bottom: 14px;
     }
 
     .info-card p {
-      font-size: 1rem;
-      line-height: 1.7;
       text-align: center;
+      font-size: 1rem;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .strategic-layout,
+    .market-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+      min-height: 76vh;
+    }
+
+    .strategic-left,
+    .market-left {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .section-side-title {
+      font-size: 3.5rem;
+      line-height: 1.03;
+      font-weight: 800;
+    }
+
+    .side-image {
+      justify-self: center;
+      width: 100%;
+      max-width: 420px;
     }
 
     .team-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-      margin-top: 20px;
+      gap: 24px;
+      margin-top: 28px;
     }
 
     .member-card {
       background: #fff;
-      border-radius: 24px;
-      padding: 26px 20px;
+      border-radius: 20px;
+      padding: 22px 18px;
       text-align: center;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.08);
       transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
     .member-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 18px 34px rgba(0,0,0,0.14);
+      box-shadow: 0 18px 34px rgba(0,0,0,0.12);
     }
 
     .member-card img {
-      width: 168px;
-      height: 168px;
-      margin: 0 auto 18px;
+      width: 155px;
+      height: 155px;
       object-fit: cover;
       border-radius: 50%;
+      margin: 0 auto 16px;
       border: 5px solid #edf1ea;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
     }
 
     .member-card h3 {
-      font-size: 1.28rem;
+      font-size: 1.25rem;
       margin-bottom: 6px;
       font-weight: 800;
     }
 
     .member-card p {
-      color: #5f775b;
+      color: #64805f;
       font-weight: 700;
     }
 
     .footer {
       text-align: center;
-      padding-top: 14px;
+      padding-top: 18px;
       font-weight: 700;
-      color: #5d5d5d;
-      letter-spacing: 0.2px;
+      color: #555;
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(65px);
+      transform: translateY(70px);
       transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
@@ -311,29 +362,33 @@
     @media (max-width: 1100px) {
       .hero-grid,
       .context-grid,
+      .strategic-layout,
+      .market-layout,
       .card-grid,
-      .card-grid.three,
+      .cards-row,
       .team-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      .title {
-        font-size: 3.4rem;
+      .card-grid.three {
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
-      .subtitle {
-        font-size: 2rem;
+      .hero-title {
+        font-size: 3.3rem;
       }
 
-      .highlight-title span,
+      .hero-subtitle,
+      .section-side-title,
+      .focus-title,
       .section-title {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
       }
     }
 
     @media (max-width: 768px) {
       section {
-        padding: 40px 12px;
+        padding: 34px 12px;
       }
 
       .inner {
@@ -342,41 +397,33 @@
 
       .hero-grid,
       .context-grid,
+      .strategic-layout,
+      .market-layout,
       .card-grid,
       .card-grid.three,
+      .cards-row,
       .team-grid {
         grid-template-columns: 1fr;
       }
 
-      .title {
+      .hero-title {
         font-size: 2.5rem;
       }
 
-      .subtitle {
-        font-size: 1.5rem;
+      .hero-subtitle,
+      .section-side-title,
+      .focus-title,
+      .section-title {
+        font-size: 1.9rem;
       }
 
-      .section-title,
-      .highlight-title span {
-        font-size: 2rem;
+      .top-logo {
+        width: 76px;
+        right: 18px;
+        top: 16px;
       }
 
-      .hero-right {
-        align-items: center;
-      }
-
-      .vub-box {
-        align-self: center;
-      }
-
-      .member-card img {
-        width: 140px;
-        height: 140px;
-      }
-
-      .curve.one,
-      .curve.two,
-      .curve.three {
+      .curve {
         opacity: 0.45;
       }
     }
@@ -384,16 +431,19 @@
 </head>
 <body>
 
-  <section class="hero">
-    <div class="wrapper reveal">
+  <section>
+    <div class="page reveal">
       <div class="curve one"></div>
-      <div class="curve two"></div>
+      <div class="curve three"></div>
+      <div class="top-logo">
+        <img src="vub-logo.png" alt="VUB Logo">
+      </div>
 
       <div class="inner">
         <div class="hero-grid">
           <div>
-            <h1 class="title">A Blueprint for<br>Reading Literacy</h1>
-            <h2 class="subtitle">Sustainable School<br>Improvement in the<br>Antwerp Region</h2>
+            <h1 class="hero-title">A Blueprint for<br>Reading Literacy</h1>
+            <h2 class="hero-subtitle">——Sustainable School<br>Improvement in the<br>Antwerp Region</h2>
 
             <div class="team-box">
               Presented by Team 6<br>
@@ -402,12 +452,8 @@
           </div>
 
           <div class="hero-right">
-            <div class="vub-box">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Vrije_Universiteit_Brussel_logo.svg/512px-Vrije_Universiteit_Brussel_logo.svg.png" alt="VUB Logo">
-            </div>
-
-            <div class="map-card">
-              <img src="map.png" alt="Antwerp Map">
+            <div class="hero-map">
+              <img src="map-new.png" alt="Antwerp Map">
             </div>
           </div>
         </div>
@@ -416,17 +462,21 @@
   </section>
 
   <section>
-    <div class="wrapper reveal">
-      <div class="curve three"></div>
-
+    <div class="page reveal">
+      <div class="curve two"></div>
       <div class="inner">
+        <div class="top-logo">
+          <img src="vub-logo.png" alt="VUB Logo">
+        </div>
+
         <h2 class="section-title">Vision of this Blueprint</h2>
 
         <div class="text-block">
           <p>We envision a district where every student—regardless of home language or background—leaves secondary school as a confident, capable reader.</p>
-          <p>In this vision, reading is not confined to language classes. It happens across all subjects: students in science class can interpret complex texts, students in history can analyze primary sources, and students in vocational tracks can read and follow technical instructions independently.</p>
+          <p>In this vision, reading is not confined to language classes. It happens across all subjects: students in science class can interpret complex texts, students in history can analyze primary sources, and students in vocational tracks can read and follow technical instructions independently. Reading becomes the foundation upon which all other learning is built.</p>
           <p>Teachers in every discipline see themselves as reading teachers. They have the training, the tools, and the time to support students' comprehension. They collaborate across subjects, ensuring that reading strategies are reinforced consistently throughout the school day.</p>
-          <p>Students take ownership of their own reading development. They set goals, track progress, and reflect on what strategies work for them. Families are partners in this work and feel connected to the school and confident in their role.</p>
+          <p>Students take ownership of their own reading development. They set goals, track their progress, and reflect on what strategies work for them. They read not only because they have to, but because they find meaning and interest in what texts offer.</p>
+          <p>Families are partners in this work. They understand how to support reading at home, even when Dutch is not their first language. They feel connected to the school and confident in their role.</p>
           <p>This is what we are working toward: a district where strong reading literacy is not an exception, but the expectation—for every student, in every school, every day.</p>
         </div>
       </div>
@@ -434,22 +484,25 @@
   </section>
 
   <section>
-    <div class="wrapper reveal">
-      <div class="curve one"></div>
-
+    <div class="page reveal">
+      <div class="curve two"></div>
       <div class="inner">
+        <div class="top-logo">
+          <img src="vub-logo.png" alt="VUB Logo">
+        </div>
+
         <h2 class="section-title">Context</h2>
 
         <div class="context-grid">
           <div class="text-block">
             <p>Our client is a school district in the Antwerp region, serving nine secondary schools and approximately 8,500 students. The district includes seven general secondary schools and two schools for special educational needs.</p>
             <p>The student population is highly diverse. Many students come from Turkish, Moroccan, and Eastern European backgrounds, and a significant number speak a language other than Dutch at home. This linguistic diversity is a strength, but it also means many students are learning to read in a language that is not their first.</p>
-            <p>Teachers across subjects report that reading comprehension struggles affect learning in science, history, and beyond. Yet many have not been trained to teach reading—especially in multilingual classrooms. Families want to help but often face language barriers themselves.</p>
+            <p>Teachers across subjects report that reading comprehension struggles affect learning in science, history, and beyond. Yet most have not been trained to teach reading—especially in multilingual classrooms. Families want to help but often face language barriers themselves.</p>
             <p>The district leadership recognizes this challenge and is committed to a long-term, coordinated approach. This blueprint is designed to meet that need.</p>
           </div>
 
           <div class="context-image">
-            <img src="map.png" alt="Antwerp region map">
+            <img src="map-new.png" alt="Antwerp Context Map">
           </div>
         </div>
       </div>
@@ -457,33 +510,35 @@
   </section>
 
   <section>
-    <div class="wrapper reveal">
+    <div class="page reveal">
+      <div class="curve one"></div>
       <div class="curve two"></div>
 
       <div class="inner">
-        <div class="highlight-title">
-          <span>Vision &amp; Direction</span>
+        <div class="focus-head">
+          <div class="pill">✳ Rimberio</div>
+          <div class="focus-title">Vision &amp; Direction</div>
         </div>
 
         <div class="card-grid">
           <div class="info-card reveal delay-1">
-            <h3>Peer Tutoring</h3>
-            <p>Students support one another through structured reading partnerships that build confidence, comprehension, and communication skills.</p>
+            <h3>Long-term<br>Goals</h3>
+            <p>We're targeting market leadership within three years through innovation and expansion.</p>
           </div>
 
           <div class="info-card reveal delay-2">
-            <h3>Parental Engagement</h3>
-            <p>Families are included as partners in literacy development through accessible communication, support tools, and stronger school connection.</p>
+            <h3>Core Values<br>Alignment</h3>
+            <p>Every strategy we develop reinforces our commitment to integrity and excellence.</p>
           </div>
 
           <div class="info-card reveal delay-3">
-            <h3>Self-Regulated Learning</h3>
-            <p>Students learn to set goals, monitor progress, reflect on strategies, and take ownership of their reading development.</p>
+            <h3>Success<br>Metrics</h3>
+            <p>We measure progress through revenue growth, customer satisfaction, and market share.</p>
           </div>
 
           <div class="info-card reveal delay-4">
-            <h3>School-wide Impact</h3>
-            <p>Reading becomes a shared responsibility across subjects, helping students succeed in every classroom and throughout the school day.</p>
+            <h3>Stakeholder<br>Impact</h3>
+            <p>Our plans create value for customers, employees, and investors alike.</p>
           </div>
         </div>
       </div>
@@ -491,8 +546,88 @@
   </section>
 
   <section>
-    <div class="wrapper reveal">
+    <div class="page reveal">
       <div class="curve three"></div>
+      <div class="curve four"></div>
+
+      <div class="inner">
+        <div class="strategic-layout">
+          <div class="strategic-left">
+            <div class="cards-row">
+              <div class="info-card reveal delay-1">
+                <h3>Growth Initiatives</h3>
+                <p>We're investing in product development and geographic expansion.</p>
+              </div>
+
+              <div class="info-card reveal delay-2">
+                <h3>Operational Excellence</h3>
+                <p>Streamlining processes to improve efficiency by 30%.</p>
+              </div>
+
+              <div class="info-card reveal delay-3">
+                <h3>Talent Development</h3>
+                <p>Building capabilities through training and strategic hiring.</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="pill">✳ Rimberio</div>
+              <div class="arrow">«««</div>
+              <div class="section-side-title">Strategic<br>Priorities</div>
+            </div>
+          </div>
+
+          <div class="side-image reveal delay-4">
+            <img src="strategic.png.new.png" alt="Strategic Priorities">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="page reveal">
+      <div class="curve two"></div>
+
+      <div class="inner">
+        <div class="market-layout">
+          <div class="market-left">
+            <div class="arrow">«««</div>
+            <div class="pill">✳ Rimberio</div>
+            <div class="section-side-title">Market<br>Opportunities</div>
+          </div>
+
+          <div>
+            <div class="cards-row">
+              <div class="info-card reveal delay-1">
+                <h3>Emerging Trends</h3>
+                <p>We've identified three high-potential sectors experiencing rapid digital transformation.</p>
+              </div>
+
+              <div class="info-card reveal delay-2">
+                <h3>Customer Needs</h3>
+                <p>Gap analysis reveals unmet demands we're uniquely positioned to address.</p>
+              </div>
+
+              <div class="info-card reveal delay-3">
+                <h3>Partnership Potential</h3>
+                <p>Strategic alliances could accelerate our market penetration.</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 28px; display:flex; justify-content:flex-start;">
+              <img src="market.png.new.png" alt="Market Opportunities" style="max-width: 240px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="page reveal">
+      <div class="curve one"></div>
+      <div class="curve four"></div>
 
       <div class="inner">
         <h2 class="section-title">Presented by Team 6</h2>
@@ -522,50 +657,21 @@
             <p>Team Member</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section>
-    <div class="wrapper reveal">
-      <div class="curve one"></div>
-
-      <div class="inner">
-        <h2 class="section-title">Strategic Priorities</h2>
-
-        <div class="card-grid three">
-          <div class="info-card reveal delay-1">
-            <h3>Reading Across Subjects</h3>
-            <p>Support teachers in every discipline to include reading strategies that improve understanding and learning outcomes across the curriculum.</p>
-          </div>
-
-          <div class="info-card reveal delay-2">
-            <h3>Family-School Connection</h3>
-            <p>Strengthen communication and trust with families so literacy support continues both inside and outside school.</p>
-          </div>
-
-          <div class="info-card reveal delay-3">
-            <h3>Student Ownership</h3>
-            <p>Help learners build independence through reflection, goal setting, and active engagement with meaningful texts.</p>
-          </div>
-        </div>
-
-        <div class="footer" style="margin-top: 34px;">
-          Reading Literacy Project • Team 6
-        </div>
+        <div class="footer">Reading Literacy Project • Team 6</div>
       </div>
     </div>
   </section>
 
   <script>
-    const items = document.querySelectorAll('.reveal');
+    const reveals = document.querySelectorAll('.reveal');
 
     function revealOnScroll() {
-      const trigger = window.innerHeight - 80;
+      const triggerBottom = window.innerHeight - 80;
 
-      items.forEach(item => {
-        const top = item.getBoundingClientRect().top;
-        if (top < trigger) {
+      reveals.forEach((item) => {
+        const itemTop = item.getBoundingClientRect().top;
+        if (itemTop < triggerBottom) {
           item.classList.add('active');
         }
       });

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading Literacy Team 6</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #e9e9e9;
+      color: #1d1d1d;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      width: 100%;
+      padding: 70px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      background: #efefef;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .main-title {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.05;
+      color: #ff3b36;
+      margin-bottom: 30px;
+    }
+
+    .subtitle {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #111;
+      margin-bottom: 35px;
+    }
+
+    .team-box {
+      display: inline-block;
+      border: 2px solid #587452;
+      color: #6d8666;
+      border-radius: 10px;
+      padding: 24px 34px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      background: transparent;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-box {
+      align-self: flex-end;
+      background: white;
+      padding: 10px;
+      width: 110px;
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: auto;
+    }
+
+    .map-card {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .map-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: #111;
+    }
+
+    .text-block {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+
+    .text-block p {
+      margin-bottom: 18px;
+    }
+
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .context-map {
+      max-width: 340px;
+      justify-self: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .focus-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .focus-header h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      display: inline-block;
+      border: 3px solid #8f53ff;
+      padding: 10px 24px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      background: #426b43;
+      color: white;
+      border-radius: 20px;
+      padding: 30px 22px;
+      text-align: center;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .team-section .section-title {
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 22px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .member-card img {
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #eef1ea;
+    }
+
+    .member-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: #1d1d1d;
+    }
+
+    .member-card p {
+      color: #5d7058;
+      font-weight: 700;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      padding-top: 20px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(70px);
+      transition: all 0.9s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bg-line {
+      position: absolute;
+      border: 12px solid rgba(120, 140, 120, 0.12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .line1 {
+      width: 380px;
+      height: 380px;
+      top: -80px;
+      left: 120px;
+    }
+
+    .line2 {
+      width: 330px;
+      height: 330px;
+      bottom: -100px;
+      right: -40px;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .context-grid,
+      .cards,
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .main-title {
+        font-size: 3.2rem;
+      }
+
+      .subtitle {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid,
+      .context-grid,
+      .cards,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 28px 20px;
+      }
+
+      .main-title {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+      }
+
+      .section-title,
+      .focus-header h2 {
+        font-size: 2rem;
+      }
+
+      .logo-box {
+        align-self: center;
+      }
+
+      .member-card img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container reveal">
+      <div class="bg-line line1"></div>
+      <div class="bg-line line2"></div>
+
+      <div class="hero-grid">
+        <div>
+          <h1 class="main-title">A Blueprint for<br>Reading Literacy</h1>
+          <h2 class="subtitle">Sustainable School<br>Improvement in the<br>Antwerp Region</h2>
+
+          <div class="team-box">
+            Presented by Team 6<br>
+            Rana, Lingyan, Chitra, Mariana
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="logo-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Vrije_Universiteit_Brussel_logo.svg/512px-Vrije_Universiteit_Brussel_logo.svg.png" alt="VUB Logo">
+          </div>
+
+          <div class="map-card">
+            <img src="map.png" alt="Antwerp Map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container reveal">
+      <div class="bg-line line1"></div>
+      <h2 class="section-title">Vision of this Blueprint</h2>
+
+      <div class="text-block">
+        <p>We envision a district where every student—regardless of home language or background—leaves secondary school as a confident, capable reader.</p>
+        <p>In this vision, reading is not confined to language classes. It happens across all subjects: students in science class can interpret complex texts, students in history can analyze primary sources, and students in vocational tracks can read and follow technical instructions independently.</p>
+        <p>Teachers in every discipline see themselves as reading teachers. They have the training, the tools, and the time to support students' comprehension. They collaborate across subjects, ensuring that reading strategies are reinforced consistently throughout the school day.</p>
+        <p>Students take ownership of their own reading development. They set goals, track their progress, and reflect on what strategies work for them. Families are partners in this work and feel connected to the school and confident in their role.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container reveal">
+      <div class="bg-line line2"></div>
+      <h2 class="section-title">Context</h2>
+
+      <div class="context-grid">
+        <div class="text-block">
+          <p>Our client is a school district in the Antwerp region, serving nine secondary schools and approximately 8,500 students. The district includes seven general secondary schools and two schools for special educational needs.</p>
+          <p>The student population is highly diverse. Many students come from Turkish, Moroccan, and Eastern European backgrounds, and a significant number speak a language other than Dutch at home. This linguistic diversity is a strength, but it also means many students are learning to read in a language that is not their first.</p>
+          <p>Teachers across subjects report that reading comprehension struggles affect learning in science, history, and beyond. Families want to help but often face language barriers themselves.</p>
+        </div>
+
+        <div class="context-map">
+          <img src="map.png" alt="Antwerp region">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container reveal">
+      <div class="bg-line line1"></div>
+
+      <div class="focus-header">
+        <h2>Vision & Direction</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card reveal">
+          <h3>Peer Tutoring</h3>
+          <p>Students support each other through structured reading partnerships that build confidence, comprehension, and communication skills.</p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Parental Engagement</h3>
+          <p>Families are included as partners in literacy development through accessible communication, support tools, and school connection.</p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Self-Regulated Learning</h3>
+          <p>Students learn to set goals, monitor progress, reflect on strategies, and take ownership of their reading development.</p>
+        </div>
+
+        <div class="card reveal">
+          <h3>School-wide Impact</h3>
+          <p>Reading becomes a shared responsibility across subjects, helping students succeed in every classroom and every school day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="container reveal">
+      <div class="bg-line line2"></div>
+      <h2 class="section-title">Presented by Team 6</h2>
+
+      <div class="team-grid">
+        <div class="member-card reveal">
+          <img src="rana.jpg" alt="Rana">
+          <h3>Rana</h3>
+          <p>Team Member</p>
+        </div>
+
+        <div class="member-card reveal">
+          <img src="lingyan.jpg" alt="Lingyan">
+          <h3>Lingyan</h3>
+          <p>Team Member</p>
+        </div>
+
+        <div class="member-card reveal">
+          <img src="chitra.jpg" alt="Chitra">
+          <h3>Chitra</h3>
+          <p>Team Member</p>
+        </div>
+
+        <div class="member-card reveal">
+          <img src="mariana.jpg" alt="Mariana">
+          <h3>Mariana</h3>
+          <p>Team Member</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container reveal">
+      <h2 class="section-title">Strategic Priorities</h2>
+
+      <div class="cards">
+        <div class="card reveal">
+          <h3>Reading Across Subjects</h3>
+          <p>Support teachers in every discipline to include reading strategies that improve understanding and learning outcomes.</p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Family-School Connection</h3>
+          <p>Strengthen communication and trust with families so literacy support continues both inside and outside school.</p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Student Ownership</h3>
+          <p>Help learners build independence through reflection, goal setting, and active engagement with meaningful texts.</p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Long-term Sustainability</h3>
+          <p>Create a coordinated and lasting literacy model that can be shared across schools in the Antwerp region.</p>
+        </div>
+      </div>
+
+      <div class="footer" style="margin-top:40px;">
+        Reading Literacy Project • Team 6
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+
+      reveals.forEach((element, index) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const visiblePoint = 100;
+
+        if (elementTop < windowHeight - visiblePoint) {
+          setTimeout(() => {
+            element.classList.add('active');
+          }, index * 100);
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>

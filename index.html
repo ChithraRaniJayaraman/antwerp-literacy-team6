@@ -354,6 +354,33 @@
       transform: translateY(0);
     }
 
+    .hero-pop {
+      opacity: 0;
+      transform: scale(0.88) translateY(30px);
+      animation: popIn 0.8s ease forwards;
+    }
+
+    .hero-delay-1 { animation-delay: 0.2s; }
+    .hero-delay-2 { animation-delay: 0.5s; }
+    .hero-delay-3 { animation-delay: 0.8s; }
+    .hero-delay-4 { animation-delay: 1.1s; }
+    .hero-delay-5 { animation-delay: 1.35s; }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.88) translateY(30px);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.03) translateY(-4px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
     .delay-1 { transition-delay: 0.08s; }
     .delay-2 { transition-delay: 0.16s; }
     .delay-3 { transition-delay: 0.24s; }
@@ -432,27 +459,28 @@
 <body>
 
   <section>
-    <div class="page reveal">
+    <div class="page">
       <div class="curve one"></div>
       <div class="curve three"></div>
-      <div class="top-logo">
+
+      <div class="top-logo hero-pop hero-delay-5">
         <img src="vub-logo.png" alt="VUB Logo">
       </div>
 
       <div class="inner">
         <div class="hero-grid">
           <div>
-            <h1 class="hero-title">A Blueprint for<br>Reading Literacy</h1>
-            <h2 class="hero-subtitle">——Sustainable School<br>Improvement in the<br>Antwerp Region</h2>
+            <h1 class="hero-title hero-pop hero-delay-1">A Blueprint for<br>Reading Literacy</h1>
+            <h2 class="hero-subtitle hero-pop hero-delay-2">——Sustainable School<br>Improvement in the<br>Antwerp Region</h2>
 
-            <div class="team-box">
+            <div class="team-box hero-pop hero-delay-3">
               Presented by Team 6<br>
               Rana, Lingyan, Chitra, Mariana
             </div>
           </div>
 
           <div class="hero-right">
-            <div class="hero-map">
+            <div class="hero-map hero-pop hero-delay-4">
               <img src="map-new.png" alt="Antwerp Map">
             </div>
           </div>

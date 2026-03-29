@@ -27,7 +27,6 @@
       margin: auto;
     }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -90,7 +89,6 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     }
 
-    /* LOGO */
     .logo {
       position: absolute;
       top: 20px;
@@ -98,7 +96,6 @@
       width: 80px;
     }
 
-    /* CARD SECTION */
     .section-card {
       background: white;
       border-radius: 20px;
@@ -117,7 +114,6 @@
       color: #333;
     }
 
-    /* GRID */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -125,7 +121,6 @@
       align-items: center;
     }
 
-    /* CARDS */
     .cards {
       display: grid;
       grid-template-columns: repeat(3,1fr);
@@ -149,7 +144,6 @@
       margin-bottom: 10px;
     }
 
-    /* TEAM */
     .team {
       display: grid;
       grid-template-columns: repeat(4,1fr);
@@ -177,7 +171,6 @@
       border-radius: 15px;
     }
 
-    /* ANIMATION */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -189,7 +182,6 @@
       transform: translateY(0);
     }
 
-    /* MOBILE */
     @media(max-width:768px){
       .hero-box,
       .grid-2,
@@ -232,7 +224,7 @@
         </div>
 
         <div class="hero-right">
-          <img src="./READING%20LITERACY%20TEAM%20FIRST%20PAGE.jpeg" alt="Reading Literacy Cover">
+          <img src="reading-cover.jpeg" alt="Reading Literacy Cover">
         </div>
 
       </div>
@@ -260,7 +252,6 @@
           <img src="mariana.jpg" alt="Mariana"><h3>Mariana</h3>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -284,7 +275,6 @@
 
         <img src="map-new.png" class="section-image" alt="Map">
       </div>
-
     </div>
   </section>
 
@@ -297,7 +287,6 @@
         <div class="card"><h3>Parental Engagement</h3><p>Families support learning.</p></div>
         <div class="card"><h3>Self Learning</h3><p>Students take control.</p></div>
       </div>
-
     </div>
   </section>
 
@@ -314,7 +303,6 @@
 
         <img src="strategic.png.new.png" class="section-image" alt="Strategic">
       </div>
-
     </div>
   </section>
 
@@ -341,7 +329,7 @@
     window.addEventListener('scroll', () => {
       reveals.forEach(el => {
         const top = el.getBoundingClientRect().top;
-        if(top < window.innerHeight - 50){
+        if (top < window.innerHeight - 50) {
           el.classList.add('active');
         }
       });

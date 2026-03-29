@@ -1,332 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enhancing Reading Literacy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhancing Reading Literacy</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f7fa;
-  color: #111;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #111;
+    }
 
-/* SECTIONS */
-section {
-  padding: 40px 20px;
-}
+    section {
+      padding: 40px 20px;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.hero-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  background: white;
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  align-items: center;
-}
+    .hero-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      align-items: center;
+    }
 
-.hero-title {
-  font-size: 3.1rem;
-  font-weight: 900;
-  line-height: 1.15;
-  color: #2c2c2c;
-}
+    .hero-title {
+      font-size: 3.1rem;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #2c2c2c;
+    }
 
-.hero-sub {
-  margin-top: 15px;
-  font-size: 1.15rem;
-  color: #666;
-  line-height: 1.6;
-}
+    .hero-sub {
+      margin-top: 15px;
+      font-size: 1.15rem;
+      color: #666;
+      line-height: 1.6;
+    }
 
-.team-box {
-  margin-top: 22px;
-  padding: 15px 18px;
-  border-radius: 12px;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(45deg, #c5ab7d, #b79563);
-  display: inline-block;
-  box-shadow: 0 8px 18px rgba(183,149,99,0.25);
-  line-height: 1.7;
-}
+    .team-box {
+      margin-top: 22px;
+      padding: 15px 18px;
+      border-radius: 12px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #c5ab7d, #b79563);
+      display: inline-block;
+      box-shadow: 0 8px 18px rgba(183,149,99,0.25);
+      line-height: 1.7;
+    }
 
-.hero-right img {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fafafa;
+      border-radius: 18px;
+      padding: 15px;
+      min-height: 500px;
+    }
 
-/* LOGO */
-.logo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 80px;
-}
+    .hero-right img {
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
 
-/* CARD SECTION */
-.section-card {
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
+    /* LOGO */
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+    }
 
-.section-title {
-  text-align: center;
-  font-size: 2.3rem;
-  margin-bottom: 20px;
-}
+    /* CARD SECTION */
+    .section-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
-.text {
-  line-height: 1.7;
-  color: #333;
-}
+    .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+    }
 
-/* GRID */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: center;
-}
+    .text {
+      line-height: 1.7;
+      color: #333;
+    }
 
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
+    /* GRID */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  border: 1px solid #eee;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-  transition: 0.3s;
-}
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #eee;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
 
-.card h3 {
-  margin-bottom: 10px;
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-/* TEAM */
-.team {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-}
+    .card h3 {
+      margin-bottom: 10px;
+    }
 
-.member {
-  text-align: center;
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-}
+    /* TEAM */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+    }
 
-.member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+    .member {
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    }
 
-.section-image {
-  width: 100%;
-  border-radius: 15px;
-}
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
 
-/* ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s;
-}
+    .section-image {
+      width: 100%;
+      border-radius: 15px;
+    }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+    /* ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s;
+    }
 
-/* MOBILE */
-@media(max-width:768px){
-  .hero-box,
-  .grid-2,
-  .cards,
-  .team {
-    grid-template-columns: 1fr;
-  }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-  .hero-title {
-    font-size: 2.2rem;
-  }
-}
-</style>
+    /* MOBILE */
+    @media(max-width:768px){
+      .hero-box,
+      .grid-2,
+      .cards,
+      .team {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-right {
+        min-height: auto;
+      }
+
+      .hero-right img {
+        max-height: 420px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<img src="vub-logo.png" class="logo" alt="VUB logo">
+  <img src="vub-logo.png" class="logo" alt="VUB logo">
 
-<section class="hero">
-<div class="container">
-<div class="hero-box">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-box">
 
-<div>
-<h1 class="hero-title">Enhancing Reading Literacy in Flemish Secondary Schools</h1>
-<p class="hero-sub">School Improvement Studies • Antwerpen 2026</p>
+        <div>
+          <h1 class="hero-title">Enhancing Reading Literacy in Flemish Secondary Schools</h1>
+          <p class="hero-sub">School Improvement Studies • Antwerpen 2026</p>
 
-<div class="team-box">
-✨ Team Spark • Team 6 ✨<br>
-Rana • Lingyan • Chitra • Mariana
-</div>
-</div>
+          <div class="team-box">
+            ✨ Team Spark • Team 6 ✨<br>
+            Rana • Lingyan • Chitra • Mariana
+          </div>
+        </div>
 
-<div class="hero-right">
-<img src="READING LITERACY TEAM FIRST PAGE.jpeg" alt="Reading Literacy Cover">
-</div>
+        <div class="hero-right">
+          <img src="./READING%20LITERACY%20TEAM%20FIRST%20PAGE.jpeg" alt="Reading Literacy Cover">
+        </div>
 
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
 
-<section>
-<div class="container section-card reveal">
-<h2 class="section-title">Presented by Team Spark</h2>
+  <section>
+    <div class="container section-card reveal">
+      <h2 class="section-title">Presented by Team Spark</h2>
 
-<div class="team">
-<div class="member">
-<img src="rana.jpg" alt="Rana"><h3>Rana</h3>
-</div>
+      <div class="team">
+        <div class="member">
+          <img src="rana.jpg" alt="Rana"><h3>Rana</h3>
+        </div>
 
-<div class="member">
-<img src="lingyan.jpg.png" alt="Lingyan"><h3>Lingyan</h3>
-</div>
+        <div class="member">
+          <img src="lingyan.jpg.png" alt="Lingyan"><h3>Lingyan</h3>
+        </div>
 
-<div class="member">
-<img src="chitra.jpg" alt="Chitra"><h3>Chitra</h3>
-</div>
+        <div class="member">
+          <img src="chitra.jpg" alt="Chitra"><h3>Chitra</h3>
+        </div>
 
-<div class="member">
-<img src="mariana.jpg" alt="Mariana"><h3>Mariana</h3>
-</div>
-</div>
+        <div class="member">
+          <img src="mariana.jpg" alt="Mariana"><h3>Mariana</h3>
+        </div>
+      </div>
 
-</div>
-</section>
+    </div>
+  </section>
 
-<section>
-<div class="container section-card reveal">
-<h2 class="section-title">Vision</h2>
-<p class="text">
-We envision a district where every student becomes a confident reader. Reading supports all subjects and empowers lifelong learning.
-</p>
-</div>
-</section>
+  <section>
+    <div class="container section-card reveal">
+      <h2 class="section-title">Vision</h2>
+      <p class="text">
+        We envision a district where every student becomes a confident reader. Reading supports all subjects and empowers lifelong learning.
+      </p>
+    </div>
+  </section>
 
-<section>
-<div class="container section-card reveal">
-<h2 class="section-title">Context</h2>
+  <section>
+    <div class="container section-card reveal">
+      <h2 class="section-title">Context</h2>
 
-<div class="grid-2">
-<p class="text">
-Students come from diverse backgrounds and many speak different home languages. Reading challenges impact all subjects.
-</p>
+      <div class="grid-2">
+        <p class="text">
+          Students come from diverse backgrounds and many speak different home languages. Reading challenges impact all subjects.
+        </p>
 
-<img src="map-new.png" class="section-image" alt="Map">
-</div>
+        <img src="map-new.png" class="section-image" alt="Map">
+      </div>
 
-</div>
-</section>
+    </div>
+  </section>
 
-<section>
-<div class="container section-card reveal">
-<h2 class="section-title">Vision & Direction</h2>
+  <section>
+    <div class="container section-card reveal">
+      <h2 class="section-title">Vision & Direction</h2>
 
-<div class="cards">
-<div class="card"><h3>Peer Tutoring</h3><p>Students learn together.</p></div>
-<div class="card"><h3>Parental Engagement</h3><p>Families support learning.</p></div>
-<div class="card"><h3>Self Learning</h3><p>Students take control.</p></div>
-</div>
+      <div class="cards">
+        <div class="card"><h3>Peer Tutoring</h3><p>Students learn together.</p></div>
+        <div class="card"><h3>Parental Engagement</h3><p>Families support learning.</p></div>
+        <div class="card"><h3>Self Learning</h3><p>Students take control.</p></div>
+      </div>
 
-</div>
-</section>
+    </div>
+  </section>
 
-<section>
-<div class="container section-card reveal">
-<h2 class="section-title">Strategic Priorities</h2>
+  <section>
+    <div class="container section-card reveal">
+      <h2 class="section-title">Strategic Priorities</h2>
 
-<div class="grid-2">
-<div class="cards">
-<div class="card"><h3>Growth</h3></div>
-<div class="card"><h3>Operations</h3></div>
-<div class="card"><h3>Training</h3></div>
-</div>
+      <div class="grid-2">
+        <div class="cards">
+          <div class="card"><h3>Growth</h3></div>
+          <div class="card"><h3>Operations</h3></div>
+          <div class="card"><h3>Training</h3></div>
+        </div>
 
-<img src="strategic.png.new.png" class="section-image" alt="Strategic">
-</div>
+        <img src="strategic.png.new.png" class="section-image" alt="Strategic">
+      </div>
 
-</div>
-</section>
+    </div>
+  </section>
 
-<section>
-<div class="container section-card reveal">
-<h2 class="section-title">Market Opportunities</h2>
+  <section>
+    <div class="container section-card reveal">
+      <h2 class="section-title">Market Opportunities</h2>
 
-<div class="grid-2">
-<img src="market.png.new.png" class="section-image" alt="Market">
+      <div class="grid-2">
+        <img src="market.png.new.png" class="section-image" alt="Market">
 
-<div class="cards">
-<div class="card"><h3>Trends</h3></div>
-<div class="card"><h3>Needs</h3></div>
-<div class="card"><h3>Partnerships</h3></div>
-</div>
+        <div class="cards">
+          <div class="card"><h3>Trends</h3></div>
+          <div class="card"><h3>Needs</h3></div>
+          <div class="card"><h3>Partnerships</h3></div>
+        </div>
 
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
 
-<script>
-const reveals = document.querySelectorAll('.reveal');
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
 
-window.addEventListener('scroll', () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 50){
-      el.classList.add('active');
-    }
-  });
-});
-</script>
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 50){
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

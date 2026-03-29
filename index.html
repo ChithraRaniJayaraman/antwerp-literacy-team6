@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reading Literacy Project</title>
+<title>Enhancing Reading Literacy</title>
 
 <style>
 * {
@@ -30,7 +30,7 @@ section {
 
 /* HERO */
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,30 +44,39 @@ section {
   padding: 50px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  align-items: center;
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 3.1rem;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #2c2c2c;
 }
 
 .hero-sub {
   margin-top: 15px;
-  font-size: 1.2rem;
-  color: #444;
+  font-size: 1.15rem;
+  color: #666;
+  line-height: 1.6;
 }
 
 .team-box {
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  margin-top: 22px;
+  padding: 15px 18px;
+  border-radius: 12px;
   font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #c5ab7d, #b79563);
+  display: inline-block;
+  box-shadow: 0 8px 18px rgba(183,149,99,0.25);
+  line-height: 1.7;
 }
 
 .hero-right img {
   width: 100%;
   border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 /* LOGO */
@@ -102,6 +111,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  align-items: center;
 }
 
 /* CARDS */
@@ -150,6 +160,11 @@ section {
   object-fit: cover;
 }
 
+.section-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
 /* ANIMATION */
 .reveal {
   opacity: 0;
@@ -180,24 +195,24 @@ section {
 
 <body>
 
-<img src="vub-logo.png" class="logo">
+<img src="vub-logo.png" class="logo" alt="VUB logo">
 
 <section class="hero">
 <div class="container">
 <div class="hero-box">
 
 <div>
-<h1 class="hero-title">Reading Literacy</h1>
-<p class="hero-sub">Sustainable School Improvement in Antwerp</p>
+<h1 class="hero-title">Enhancing Reading Literacy in Flemish Secondary Schools</h1>
+<p class="hero-sub">School Improvement Studies • Antwerpen 2026</p>
 
 <div class="team-box">
-Team 6<br>
+✨ Team Spark • Team 6 ✨<br>
 Rana • Lingyan • Chitra • Mariana
 </div>
 </div>
 
 <div class="hero-right">
-<img src="map-new.png">
+<img src="READING LITERACY TEAM FIRST PAGE.jpeg" alt="Reading Literacy Cover">
 </div>
 
 </div>
@@ -206,23 +221,23 @@ Rana • Lingyan • Chitra • Mariana
 
 <section>
 <div class="container section-card reveal">
-<h2 class="section-title">Presented by Team 6</h2>
+<h2 class="section-title">Presented by Team Spark</h2>
 
 <div class="team">
 <div class="member">
-<img src="rana.jpg"><h3>Rana</h3>
+<img src="rana.jpg" alt="Rana"><h3>Rana</h3>
 </div>
 
 <div class="member">
-<img src="lingyan.jpg.png"><h3>Lingyan</h3>
+<img src="lingyan.jpg.png" alt="Lingyan"><h3>Lingyan</h3>
 </div>
 
 <div class="member">
-<img src="chitra.jpg"><h3>Chitra</h3>
+<img src="chitra.jpg" alt="Chitra"><h3>Chitra</h3>
 </div>
 
 <div class="member">
-<img src="mariana.jpg"><h3>Mariana</h3>
+<img src="mariana.jpg" alt="Mariana"><h3>Mariana</h3>
 </div>
 </div>
 
@@ -247,7 +262,7 @@ We envision a district where every student becomes a confident reader. Reading s
 Students come from diverse backgrounds and many speak different home languages. Reading challenges impact all subjects.
 </p>
 
-<img src="map-new.png">
+<img src="map-new.png" class="section-image" alt="Map">
 </div>
 
 </div>
@@ -277,7 +292,7 @@ Students come from diverse backgrounds and many speak different home languages. 
 <div class="card"><h3>Training</h3></div>
 </div>
 
-<img src="strategic.png.new.png">
+<img src="strategic.png.new.png" class="section-image" alt="Strategic">
 </div>
 
 </div>
@@ -288,7 +303,7 @@ Students come from diverse backgrounds and many speak different home languages. 
 <h2 class="section-title">Market Opportunities</h2>
 
 <div class="grid-2">
-<img src="market.png.new.png">
+<img src="market.png.new.png" class="section-image" alt="Market">
 
 <div class="cards">
 <div class="card"><h3>Trends</h3></div>

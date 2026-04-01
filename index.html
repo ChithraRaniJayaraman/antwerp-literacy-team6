@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Enhancing Reading Literacy</title>
-
   <style>
     * {
       margin: 0;
@@ -13,336 +12,132 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #111;
+      background: #f2f0ec;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
-    section {
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* HERO - CHANGED */
     .hero {
       min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      background: #f2f0ec;
+    }
+
+    .hero-text {
+      background: rgba(242, 240, 236, 0.96);
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      background: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
-                  url("reading-cover.jpeg") center/cover no-repeat;
-      position: relative;
-      padding: 0 20px;
+      padding: 60px 70px 60px 80px;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.18);
+    .hero-text h1 {
+      color: #8a8166;
+      font-size: 5.1rem;
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      max-width: 620px;
     }
 
-    .hero-content {
+    .hero-subtitle {
+      margin-top: 70px;
+      color: #8a8166;
+      font-size: 3.3rem;
+      line-height: 1;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .hero-line {
+      margin-top: 26px;
+      width: 190px;
+      height: 5px;
+      background: #8a8166;
+    }
+
+    .hero-image {
       position: relative;
-      z-index: 2;
+      overflow: hidden;
+    }
+
+    .hero-image img {
       width: 100%;
-      max-width: 1100px;
-      text-align: center;
-      color: white;
-      animation: fadeUp 1s ease;
-    }
-
-    .hero-title {
-      font-size: 4.2rem;
-      font-weight: 900;
-      line-height: 1.1;
-      color: white;
-      text-shadow: 0 4px 20px rgba(0,0,0,0.25);
-    }
-
-    .hero-sub {
-      margin-top: 20px;
-      font-size: 1.45rem;
-      color: white;
-      line-height: 1.6;
-      text-shadow: 0 3px 14px rgba(0,0,0,0.22);
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .team-box {
-      margin-top: 28px;
-      padding: 15px 24px;
-      border-radius: 12px;
-      font-weight: bold;
-      color: white;
-      background: rgba(0,0,0,0.35);
-      display: inline-block;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-      line-height: 1.7;
-      backdrop-filter: blur(4px);
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 84px;
-      z-index: 3;
-      background: white;
-      padding: 6px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .section-card {
-      background: white;
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.3rem;
-      margin-bottom: 20px;
-    }
-
-    .text {
-      line-height: 1.7;
-      color: #333;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid #eee;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .team {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 20px;
-    }
-
-    .member {
-      text-align: center;
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-    }
-
-    .member img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      height: 100%;
       object-fit: cover;
-      margin-bottom: 10px;
+      object-position: center;
+      display: block;
+      filter: none;
     }
 
-    .section-image {
-      width: 100%;
-      border-radius: 15px;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.8s;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
+    @media (max-width: 1200px) {
+      .hero-text h1 {
+        font-size: 4.2rem;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      .hero-subtitle {
+        font-size: 2.8rem;
       }
     }
 
-    @media(max-width:768px){
-      .grid-2,
-      .cards,
-      .team {
+    @media (max-width: 900px) {
+      .hero {
         grid-template-columns: 1fr;
       }
 
-      .hero-title {
-        font-size: 2.4rem;
+      .hero-text {
+        order: 2;
+        padding: 40px 28px;
       }
 
-      .hero-sub {
-        font-size: 1.05rem;
+      .hero-image {
+        order: 1;
+        min-height: 45vh;
       }
 
-      .team-box {
-        font-size: 0.95rem;
+      .hero-text h1 {
+        font-size: 2.8rem;
+        max-width: 100%;
       }
 
-      .logo {
-        width: 70px;
+      .hero-subtitle {
+        margin-top: 40px;
+        font-size: 2.1rem;
+      }
+
+      .hero-line {
+        width: 120px;
+        height: 4px;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <img src="vub-logo.png" class="logo" alt="VUB logo">
-
   <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Enhancing Reading Literacy in Flemish Secondary Schools</h1>
-      <p class="hero-sub">School Improvement Studies • Antwerpen 2026</p>
+    <div class="hero-text">
+      <h1>
+        [Enhancing<br>
+        Reading<br>
+        Literacy in<br>
+        Flemish<br>
+        Secondary<br>
+        Schools]
+      </h1>
 
-      <div class="team-box">
-        ✨ Team Spark • Team 6 ✨<br>
-        Rana • Lingyan • Chitra • Mariana
+      <div class="hero-subtitle">
+        [Antwerpen-<br>
+        2026]
       </div>
+
+      <div class="hero-line"></div>
+    </div>
+
+    <div class="hero-image">
+      <img src="hero-library.jpg" alt="Library and study space">
     </div>
   </section>
-
-  <section>
-    <div class="container section-card reveal">
-      <h2 class="section-title">Presented by Team Spark</h2>
-
-      <div class="team">
-        <div class="member">
-          <img src="rana.jpg" alt="Rana"><h3>Rana</h3>
-        </div>
-
-        <div class="member">
-          <img src="lingyan.jpg.png" alt="Lingyan"><h3>Lingyan</h3>
-        </div>
-
-        <div class="member">
-          <img src="chitra.jpg" alt="Chitra"><h3>Chitra</h3>
-        </div>
-
-        <div class="member">
-          <img src="mariana.jpg" alt="Mariana"><h3>Mariana</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container section-card reveal">
-      <h2 class="section-title">Vision</h2>
-      <p class="text">
-        We envision a district where every student becomes a confident reader. Reading supports all subjects and empowers lifelong learning.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container section-card reveal">
-      <h2 class="section-title">Context</h2>
-
-      <div class="grid-2">
-        <p class="text">
-          Students come from diverse backgrounds and many speak different home languages. Reading challenges impact all subjects.
-        </p>
-
-        <img src="map-new.png" class="section-image" alt="Map">
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container section-card reveal">
-      <h2 class="section-title">Vision & Direction</h2>
-
-      <div class="cards">
-        <div class="card"><h3>Peer Tutoring</h3><p>Students learn together.</p></div>
-        <div class="card"><h3>Parental Engagement</h3><p>Families support learning.</p></div>
-        <div class="card"><h3>Self Learning</h3><p>Students take control.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container section-card reveal">
-      <h2 class="section-title">Strategic Priorities</h2>
-
-      <div class="grid-2">
-        <div class="cards">
-          <div class="card"><h3>Growth</h3></div>
-          <div class="card"><h3>Operations</h3></div>
-          <div class="card"><h3>Training</h3></div>
-        </div>
-
-        <img src="strategic.png.new.png" class="section-image" alt="Strategic">
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container section-card reveal">
-      <h2 class="section-title">Market Opportunities</h2>
-
-      <div class="grid-2">
-        <img src="market.png.new.png" class="section-image" alt="Market">
-
-        <div class="cards">
-          <div class="card"><h3>Trends</h3></div>
-          <div class="card"><h3>Needs</h3></div>
-          <div class="card"><h3>Partnerships</h3></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-
-    window.addEventListener('scroll', () => {
-      reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 50) {
-          el.classList.add('active');
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>

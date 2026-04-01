@@ -21,14 +21,14 @@ body {
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url('hero-library.jpg') center center / cover no-repeat;
+  background: url('hero-library.jpg?v=2') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-/* LIGHT OVERLAY (keeps brightness) */
+/* LIGHT OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
@@ -47,7 +47,7 @@ body {
 /* TITLE */
 .hero h1 {
   color: #ffffff;
-  font-size: 7rem; /* slightly bigger */
+  font-size: 7rem;
   line-height: 1.05;
   margin-bottom: 25px;
 
@@ -58,17 +58,17 @@ body {
   animation: popBounce 1.2s ease forwards;
 }
 
-/* SUBTITLE (FIXED ✔ bigger + bold) */
+/* 🔥 SUBTITLE FIXED BIG */
 .hero-subtitle {
-  color: #ffffff;
-  font-size: 2.3rem;
-  font-weight: 600;
+  color: #ffffff !important;
+  font-size: 3rem !important;
+  font-weight: 700 !important;
   letter-spacing: 1px;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 
   text-shadow:
-    0 4px 10px rgba(0,0,0,0.25),
-    0 8px 20px rgba(0,0,0,0.2);
+    0 5px 12px rgba(0,0,0,0.35),
+    0 10px 25px rgba(0,0,0,0.3);
 
   animation: fadeUp 1s ease forwards;
 }
@@ -87,7 +87,7 @@ body {
   animation: fadeUp 1s ease forwards;
 }
 
-/* BIG SHINING DOTS */
+/* DOTS */
 .dot {
   position: absolute;
   width: 34px;
@@ -106,7 +106,7 @@ body {
 .dot3 { bottom: 20%; left: 20%; }
 .dot4 { bottom: 25%; right: 10%; }
 
-/* CONNECTION LINES */
+/* LINES */
 .line {
   position: absolute;
   height: 4px;
@@ -183,7 +183,7 @@ body {
   }
 
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .hero-tag {
@@ -221,7 +221,7 @@ body {
     </h1>
 
     <div class="hero-subtitle">
-      Antwerpen 2026
+      ANTWERPEN 2026
     </div>
 
     <div class="hero-tag">

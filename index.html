@@ -1,214 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enhancing Reading Literacy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhancing Reading Literacy</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f3efe8;
-}
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f3efe8;
+      overflow-x: hidden;
+    }
 
-/* HERO SECTION */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: url('hero-library.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: url('hero-library.jpg') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
 
-/* overlay for readability */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25);
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.22);
+      z-index: 1;
+    }
 
-/* CONTENT */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  padding: 20px;
-}
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1150px;
+      padding: 30px 24px;
+    }
 
-/* HEADING POP ANIMATION */
-.hero h1 {
-  color: white;
-  font-size: 5rem;
-  font-weight: 700;
-  line-height: 1.05;
-  margin-bottom: 25px;
-  text-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    .hero h1 {
+      color: #ffffff;
+      font-size: 5.1rem;
+      font-weight: 700;
+      line-height: 1.06;
+      margin-bottom: 24px;
+      text-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
+      opacity: 0;
+      transform: scale(0.6) translateY(60px);
+      animation: popBounce 1.35s ease forwards;
+    }
 
-  opacity: 0;
-  transform: scale(0.6) translateY(60px);
-  animation: popBounce 1.4s ease forwards;
-}
+    .hero-subtitle {
+      color: rgba(255, 255, 255, 0.96);
+      font-size: 1.55rem;
+      margin-bottom: 30px;
+      text-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+      opacity: 0;
+      transform: translateY(28px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.45s;
+    }
 
-/* SUBTITLE */
-.hero-subtitle {
-  color: rgba(255,255,255,0.95);
-  font-size: 1.6rem;
-  margin-bottom: 30px;
+    .hero-tag {
+      display: inline-block;
+      background: rgba(76, 68, 58, 0.82);
+      color: #ffffff;
+      padding: 16px 28px;
+      border-radius: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.85s;
+    }
 
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 0.5s;
-}
+    /* dots */
+    .dot {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+      z-index: 2;
+      animation: pulse 3s ease-in-out infinite;
+    }
 
-/* TEAM BOX */
-.hero-tag {
-  display: inline-block;
-  background: rgba(60,55,50,0.8);
-  color: white;
-  padding: 16px 28px;
-  border-radius: 18px;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    .dot1 { top: 18%; left: 14%; animation-delay: 0s; }
+    .dot2 { top: 28%; right: 18%; animation-delay: 0.8s; }
+    .dot3 { bottom: 20%; left: 19%; animation-delay: 1.5s; }
+    .dot4 { bottom: 24%; right: 14%; animation-delay: 2.1s; }
 
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 0.9s;
-}
+    /* connecting lines */
+    .line {
+      position: absolute;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.58);
+      z-index: 2;
+      animation: glow 3s ease-in-out infinite;
+    }
 
-/* DOTS */
-.dot {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 0 20px white;
-  animation: pulse 3s infinite;
-}
+    .line1 {
+      top: 20%;
+      left: 15%;
+      width: 180px;
+      transform: rotate(14deg);
+    }
 
-.dot1 { top: 20%; left: 15%; }
-.dot2 { top: 30%; right: 20%; }
-.dot3 { bottom: 20%; left: 20%; }
-.dot4 { bottom: 25%; right: 15%; }
+    .line2 {
+      bottom: 22%;
+      left: 20%;
+      width: 210px;
+      transform: rotate(-12deg);
+    }
 
-/* LINES */
-.line {
-  position: absolute;
-  height: 2px;
-  background: rgba(255,255,255,0.6);
-  animation: glow 3s infinite;
-}
+    .line3 {
+      top: 30%;
+      right: 19%;
+      width: 160px;
+      transform: rotate(-16deg);
+    }
 
-.line1 {
-  top: 22%;
-  left: 16%;
-  width: 180px;
-  transform: rotate(15deg);
-}
+    /* sun rays */
+    .sun {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      z-index: 2;
+      opacity: 0.8;
+      animation: floatGlow 4s ease-in-out infinite;
+    }
 
-.line2 {
-  bottom: 22%;
-  left: 22%;
-  width: 200px;
-  transform: rotate(-10deg);
-}
+    .sun::before {
+      content: "";
+      position: absolute;
+      inset: 24px;
+      border-radius: 50%;
+      background: rgba(255, 248, 220, 0.9);
+      box-shadow: 0 0 24px rgba(255, 244, 200, 0.7);
+    }
 
-/* ANIMATIONS */
+    .sun::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background:
+        repeating-conic-gradient(
+          rgba(255, 248, 220, 0.9) 0deg 8deg,
+          transparent 8deg 22deg
+        );
+      -webkit-mask: radial-gradient(circle, transparent 0 34px, #000 35px);
+              mask: radial-gradient(circle, transparent 0 34px, #000 35px);
+      filter: drop-shadow(0 0 10px rgba(255, 248, 220, 0.45));
+    }
 
-@keyframes popBounce {
-  0% {
-    opacity: 0;
-    transform: scale(0.6) translateY(60px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.1) translateY(-10px);
-  }
-  80% {
-    transform: scale(0.95) translateY(5px);
-  }
-  100% {
-    transform: scale(1) translateY(0);
-  }
-}
+    .sun1 {
+      top: 12%;
+      right: 10%;
+      transform: scale(0.9);
+      animation-delay: 0.2s;
+    }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .sun2 {
+      bottom: 11%;
+      left: 9%;
+      transform: scale(0.75);
+      animation-delay: 1.2s;
+    }
 
-@keyframes pulse {
-  0%,100% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.4); opacity: 1; }
-}
+    @keyframes popBounce {
+      0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(60px);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.08) translateY(-10px);
+      }
+      80% {
+        transform: scale(0.96) translateY(5px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
 
-@keyframes glow {
-  0%,100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.6rem;
-  }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.4);
+        opacity: 1;
+      }
+    }
 
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
+    @keyframes glow {
+      0%, 100% {
+        opacity: 0.28;
+      }
+      50% {
+        opacity: 0.9;
+      }
+    }
 
-  .hero-tag {
-    font-size: 1rem;
-  }
-}
-</style>
+    @keyframes floatGlow {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translateY(-8px) scale(1.05);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .hero h1 {
+        font-size: 4.2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.35rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 22px;
+      }
+
+      .hero-tag {
+        font-size: 0.98rem;
+        padding: 14px 18px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
+
+      .line {
+        display: none;
+      }
+
+      .sun {
+        width: 70px;
+        height: 70px;
+      }
+
+      .sun::before {
+        inset: 16px;
+      }
+
+      .sun::after {
+        -webkit-mask: radial-gradient(circle, transparent 0 22px, #000 23px);
+                mask: radial-gradient(circle, transparent 0 22px, #000 23px);
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<section class="hero">
+  <section class="hero">
+    <div class="sun sun1"></div>
+    <div class="sun sun2"></div>
 
-  <div class="dot dot1"></div>
-  <div class="dot dot2"></div>
-  <div class="dot dot3"></div>
-  <div class="dot dot4"></div>
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+    <div class="dot dot4"></div>
 
-  <div class="line line1"></div>
-  <div class="line line2"></div>
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
 
-  <div class="hero-content">
-    <h1>
-      Enhancing Reading Literacy<br>
-      in Flemish Secondary Schools
-    </h1>
+    <div class="hero-content">
+      <h1>
+        [Enhancing Reading Literacy<br>
+        in Flemish Secondary<br>
+        Schools]
+      </h1>
 
-    <div class="hero-subtitle">
-      School Improvement Studies • Antwerpen 2026
+      <div class="hero-subtitle">
+        School Improvement Studies • Antwerpen 2026
+      </div>
+
+      <div class="hero-tag">
+        Literacy Spark 6<br>
+        Rana • Lingyan • Chitra • Mariana
+      </div>
     </div>
-
-    <div class="hero-tag">
-      Literacy Spark 6<br>
-      Rana • Lingyan • Chitra • Mariana
-    </div>
-  </div>
-
-</section>
+  </section>
 
 </body>
 </html>

@@ -234,3 +234,82 @@ body {
 
 </body>
 </html>
+
+/* ===============================
+   SECTION 2: THREEFOLD APPROACH
+   =============================== */
+
+.approach-section {
+  background: #f5efe6;
+  padding: 100px 60px;
+  border-top: 6px solid #8b6f47; /* visual separator */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.2rem;
+  color: #5a3d2b;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6b635c;
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  line-height: 1.7;
+}
+
+.approach-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.approach-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.approach-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 22px 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  border-left: 6px solid #8b6f47;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #5a3d2b;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .approach-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}

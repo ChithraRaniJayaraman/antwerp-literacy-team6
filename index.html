@@ -8,14 +8,14 @@
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 
     :root {
-      --bg: #f7faff;
-      --bg-2: #eef5ff;
-      --text: #1c2432;
-      --primary: #1d4f8c;
-      --primary-2: #3b7ccc;
-      --surface: rgba(255, 255, 255, .88);
-      --muted: #5f6c80;
-      --border: #dbe4f1;
+      --bg: #f9f6ef;
+      --bg-2: #eef7f4;
+      --text: #1d2432;
+      --primary: #173e75;
+      --primary-2: #2f7dbd;
+      --surface: rgba(255, 252, 246, .9);
+      --muted: #5e6877;
+      --border: #e6dcc9;
       --ok: #117a37;
       --gold-1: #f6de9e;
       --gold-2: #c79a45;
@@ -37,8 +37,9 @@
       font-size: 1.15rem;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(246, 222, 158, .28), transparent 26%),
-        radial-gradient(circle at bottom right, rgba(59, 124, 204, .18), transparent 28%),
+        radial-gradient(circle at top left, rgba(246, 222, 158, .38), transparent 24%),
+        radial-gradient(circle at top right, rgba(44, 140, 134, .16), transparent 22%),
+        radial-gradient(circle at bottom left, rgba(105, 71, 154, .12), transparent 24%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
       line-height: 1.65;
     }
@@ -52,7 +53,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: linear-gradient(90deg, rgba(11, 27, 46, .93), rgba(26, 45, 70, .9));
+      background: linear-gradient(90deg, rgba(11, 27, 46, .96), rgba(44, 140, 134, .82));
       backdrop-filter: blur(7px);
       border-bottom: 1px solid rgba(246, 222, 158, .35);
     }
@@ -93,7 +94,7 @@
       text-decoration: none;
       color: #fff;
       border: 1px solid rgba(255, 255, 255, .18);
-      background: linear-gradient(135deg, #1f4f86, #346fb0);
+      background: linear-gradient(135deg, #173e75, #2c8c86, #6f4ba3);
       border-radius: 999px;
       padding: .42rem .95rem;
       font-size: .92rem;
@@ -112,7 +113,7 @@
       position: relative;
       overflow: hidden;
       min-height: 84vh;
-      background: linear-gradient(rgba(255, 255, 255, .01), rgba(11, 27, 46, .03)), url("hero-library.jpg") center/cover no-repeat;
+      background: linear-gradient(rgba(255, 255, 255, .02), rgba(11, 27, 46, .04)), url("hero-library.jpg") center/cover no-repeat;
       display: grid;
       place-items: center;
       color: #fff;

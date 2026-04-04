@@ -455,6 +455,79 @@
       box-shadow: 0 4px 10px rgba(44, 33, 19, .1);
     }
 
+    .challenge-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, rgba(252, 247, 238, .92), rgba(244, 234, 215, .95));
+      border-top: 1px solid rgba(173, 132, 61, .14);
+      border-bottom: 1px solid rgba(173, 132, 61, .14);
+    }
+
+    .challenge-heading {
+      text-align: center;
+      font-family: "Cormorant Garamond", "Palatino Linotype", serif;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      color: #2f2418;
+      line-height: 1.3;
+      margin-bottom: 1.8rem;
+      text-wrap: balance;
+    }
+
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .challenge-text {
+      display: grid;
+      gap: .95rem;
+    }
+
+    .challenge-line,
+    .challenge-point {
+      font-family: "Marck Script", "Brush Script MT", cursive;
+      color: #3f2f22;
+      font-size: clamp(1.26rem, 2.2vw, 1.85rem);
+      line-height: 1.62;
+      letter-spacing: .1px;
+      margin: 0;
+    }
+
+    .challenge-list {
+      margin: .35rem 0;
+      display: grid;
+      gap: .55rem;
+    }
+
+    .challenge-point {
+      padding-left: 1.8rem;
+      position: relative;
+    }
+
+    .challenge-point::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 700;
+    }
+
+    .challenge-image {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(121, 86, 56, .22);
+      box-shadow: 0 14px 30px rgba(59, 42, 29, .18);
+      min-height: 100%;
+    }
+
+    .challenge-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -732,7 +805,8 @@
       .timeline,
       .gallery,
       .grid-2,
-      .story-team-row {
+      .story-team-row,
+      .challenge-grid {
         grid-template-columns: 1fr;
       }
 
@@ -846,6 +920,37 @@
           <p class="story-line">In this project, the real protagonists are the schools - the teachers who stayed curious, the students who kept trying, and the leaders who chose to rethink what learning can be.</p>
           <p class="story-line">We listened. We connected. We supported the momentum that was already there.</p>
           <p class="story-line">Because meaningful change does not start from outside - it grows from within.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="challenge-section reveal">
+      <div class="container">
+        <h2 class="challenge-heading">Why this challenge cannot be ignored</h2>
+
+        <div class="challenge-grid">
+          <div class="challenge-text">
+            <p class="challenge-line">Change is already happening — quietly.</p>
+            <p class="challenge-line">Across schools, reading is becoming less frequent, less engaging, and less meaningful for many students.</p>
+            <p class="challenge-line">This is not just about performance. It affects how students think, learn, and grow.</p>
+            <p class="challenge-line">We started by understanding this reality — not with assumptions, but by looking closely at what is actually happening in schools.</p>
+            <p class="challenge-line">And from there, a clear direction began to form:</p>
+
+            <div class="challenge-list">
+              <p class="challenge-point">A deeper understanding of reading challenges in Flemish secondary schools</p>
+              <p class="challenge-point">Goals grounded in real school improvement research</p>
+              <p class="challenge-point">Practical approaches: Self-Regulated Learning, Peer Tutoring, and Parental Involvement</p>
+              <p class="challenge-point">A phased plan that grows steadily over five years</p>
+              <p class="challenge-point">Ready-to-use tools, templates, and guides for immediate use</p>
+            </div>
+
+            <p class="challenge-line">We are not here to prescribe solutions.</p>
+            <p class="challenge-line">We are here to support schools with the knowledge, tools, and confidence to shape change in their own way.</p>
+          </div>
+
+          <div class="challenge-image">
+            <img src="boy-two-girls-sitting-floor-reading-books.jpg" alt="Students reading in a classroom">
+          </div>
         </div>
       </div>
     </section>

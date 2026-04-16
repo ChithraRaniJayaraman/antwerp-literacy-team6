@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -33,7 +33,7 @@
     }
 
     body {
-      font-family: "Marck Script", "Brush Script MT", cursive;
+      font-family: "Cormorant Garamond", "Palatino Linotype", serif;
       font-size: 1.15rem;
       color: var(--text);
       background:
@@ -144,12 +144,12 @@
       z-index: 3;
       max-width: min(560px, 74vw);
       margin-top: 5.4rem;
-      background: linear-gradient(145deg, rgba(9, 17, 30, .56), rgba(38, 27, 12, .42));
+      background: linear-gradient(145deg, rgba(11, 22, 38, .18), rgba(109, 72, 18, .12));
       border: 1px solid rgba(255, 233, 170, .16);
       border: 1px solid rgba(255, 233, 170, .22);
-      padding: .75rem .9rem;
+      padding: .45rem .62rem;
       box-shadow: 0 6px 14px rgba(0, 0, 0, .08);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, .2);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
       backdrop-filter: blur(1.8px);
       animation: heroFloat 5s ease-in-out infinite;
     }
@@ -160,19 +160,18 @@
       line-height: 1.1;
       margin-bottom: .9rem;
       letter-spacing: .4px;
-      color: #ffffff;
-      text-shadow: 0 3px 12px rgba(0, 0, 0, .38);
+      color: #123d6f;
+      text-shadow: 0 4px 12px rgba(255, 255, 255, .55);
       animation: headingPop 1.1s ease both;
     }
 
     .hero p {
-      font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+      font-size: clamp(1rem, 2vw, 1.3rem);
       max-width: 850px;
       margin: 0 auto 1.2rem;
       font-weight: 700;
-      line-height: 1.75;
-      color: #E6D3A3;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, .32);
+      color: #35516f;
+      text-shadow: none;
     }
 
     .hero .pill {
@@ -185,6 +184,19 @@
       background: linear-gradient(120deg, rgba(8, 24, 40, .72), rgba(42, 29, 11, .52));
       color: #6b4300;
       text-shadow: none;
+    }
+
+    .hero-authors {
+      margin-top: 1rem;
+      display: inline-block;
+      font-family: "Cinzel", serif;
+      font-size: 1rem;
+      letter-spacing: .8px;
+      color: #7a4300;
+      text-shadow: none;
+      border-top: 1px solid rgba(199, 154, 69, .42);
+      padding-top: .7rem;
+      animation: softPulse 3.6s ease-in-out infinite;
     }
 
     .sun-rays {
@@ -241,51 +253,13 @@
     .d9 { top: 23%; right: 33%; width: 10px; height: 10px; opacity: .7; animation-delay: 2.1s; }
     .d10 { bottom: 31%; left: 31%; width: 9px; height: 9px; opacity: .62; animation-delay: 2.7s; }
     .d11 { top: 52%; right: 27%; width: 8px; height: 8px; opacity: .56; animation-delay: 3.1s; }
-    .d12 { top: 34%; right: 18%; width: 9px; height: 9px; opacity: .58; animation-delay: 3.4s; }
+    .d12 { bottom: 12%; left: 47%; width: 10px; height: 10px; opacity: .7; animation-delay: 3.4s; }
     .d13 { bottom: 20%; left: 39%; width: 8px; height: 8px; opacity: .52; animation-delay: 3.8s; }
-
-    .hero-authors {
-      margin-top: 1rem;
-      display: inline-block;
-      font-family: "Cinzel", serif;
-      font-size: 1rem;
-      letter-spacing: .8px;
-      color: #7a4300;
-      text-shadow: none;
-      border-top: 1px solid rgba(199, 154, 69, .42);
-      padding-top: .7rem;
-      animation: softPulse 3.6s ease-in-out infinite;
-    }
 
     @keyframes headingPop {
       0% { opacity: 0; transform: translateY(28px) scale(.88); }
       68% { opacity: 1; transform: translateY(-6px) scale(1.04); }
       100% { opacity: 1; transform: translateY(0) scale(1); }
-    }
-
-    @keyframes sideRaysLeft {
-      from { transform: rotate(-16deg) scale(1); }
-      to { transform: rotate(344deg) scale(1.03); }
-    }
-
-    @keyframes sideRaysRight {
-      from { transform: rotate(18deg) scale(1); }
-      to { transform: rotate(378deg) scale(1.03); }
-    }
-
-    @keyframes dotShine {
-      0%, 100% { opacity: .4; transform: scale(.75); }
-      50% { opacity: .98; transform: scale(1.22); }
-    }
-
-    @keyframes auraPulse {
-      0%, 100% { opacity: .6; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-
-    @keyframes shimmerSweep {
-      0%, 100% { opacity: .42; }
-      50% { opacity: .95; }
     }
 
     @keyframes heroFloat {
@@ -296,6 +270,33 @@
     @keyframes softPulse {
       0%, 100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.02); opacity: .96; }
+    }
+
+    @keyframes auraPulse {
+      0%, 100% { opacity: .72; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.03); }
+    }
+
+    @keyframes sideRaysLeft {
+      0% { transform: rotate(-16deg) scale(1); }
+      50% { transform: rotate(-10deg) scale(1.03); }
+      100% { transform: rotate(-16deg) scale(1); }
+    }
+
+    @keyframes sideRaysRight {
+      0% { transform: rotate(18deg) scale(1); }
+      50% { transform: rotate(12deg) scale(1.03); }
+      100% { transform: rotate(18deg) scale(1); }
+    }
+
+    @keyframes shimmerSweep {
+      0%, 100% { opacity: .72; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes dotShine {
+      0%, 100% { transform: scale(.92); opacity: .72; }
+      50% { transform: scale(1.18); opacity: 1; }
     }
 
     section {
@@ -453,79 +454,6 @@
       opacity: .56;
       transform: none;
       box-shadow: 0 4px 10px rgba(44, 33, 19, .1);
-    }
-
-    .challenge-section {
-      padding: 5rem 0;
-      background: linear-gradient(180deg, rgba(252, 247, 238, .92), rgba(244, 234, 215, .95));
-      border-top: 1px solid rgba(173, 132, 61, .14);
-      border-bottom: 1px solid rgba(173, 132, 61, .14);
-    }
-
-    .challenge-heading {
-      text-align: center;
-      font-family: "Cormorant Garamond", "Palatino Linotype", serif;
-      font-size: clamp(1.7rem, 3vw, 2.6rem);
-      color: #2f2418;
-      line-height: 1.3;
-      margin-bottom: 1.8rem;
-      text-wrap: balance;
-    }
-
-    .challenge-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 2rem;
-      align-items: stretch;
-    }
-
-    .challenge-text {
-      display: grid;
-      gap: .95rem;
-    }
-
-    .challenge-line,
-    .challenge-point {
-      font-family: "Marck Script", "Brush Script MT", cursive;
-      color: #3f2f22;
-      font-size: clamp(1.26rem, 2.2vw, 1.85rem);
-      line-height: 1.62;
-      letter-spacing: .1px;
-      margin: 0;
-    }
-
-    .challenge-list {
-      margin: .35rem 0;
-      display: grid;
-      gap: .55rem;
-    }
-
-    .challenge-point {
-      padding-left: 1.8rem;
-      position: relative;
-    }
-
-    .challenge-point::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-weight: 700;
-    }
-
-    .challenge-image {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(121, 86, 56, .22);
-      box-shadow: 0 14px 30px rgba(59, 42, 29, .18);
-      min-height: 100%;
-    }
-
-    .challenge-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
     }
 
     .grid-2 {
@@ -814,11 +742,6 @@
         height: 320px;
       }
 
-      .sun-rays,
-      .ray-glow {
-        opacity: .5;
-      }
-
       h2 {
         font-size: 2rem;
       }
@@ -829,6 +752,11 @@
 
       .story-copy {
         gap: .75rem;
+      }
+
+      .sun-rays,
+      .ray-glow {
+        opacity: .5;
       }
     }
   </style>
@@ -851,8 +779,8 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <img src="antwerpen literacy team logo.png" alt="Team 6 logo">
-        <span>Reading Literacy in Antwerp 2026 • Team 6</span>
+        <img src="F_ READING LITERACY LOGO.jpeg" alt="Team 6 logo">
+        <span>Reading Literacy in Antwerp 2026 - Team 6</span>
       </div>
       <nav class="menu" aria-label="Main">
         <a href="index.html">Home</a>
@@ -886,8 +814,8 @@
         A practical school improvement blueprint for Flemish secondary education, built for
         School Improvement Studies and focused on motivation, equity, and lasting reading culture.
       </p>
-      <span class="pill">Project Team 6 • Vrije Universiteit Brussel</span>
-      <div class="hero-authors">Spark Team: Rana • Lingyan • Chitra • Mariana</div>
+      <span class="pill">Project Team 6 - Vrije Universiteit Brussel</span>
+      <div class="hero-authors">Spark Team: Rana - Lingyan - Chitra - Mariana</div>
     </div>
   </section>
 
@@ -922,37 +850,6 @@
       </div>
     </section>
 
-    <section class="challenge-section reveal">
-      <div class="container">
-        <h2 class="challenge-heading">Why this challenge cannot be ignored</h2>
-
-        <div class="challenge-grid">
-          <div class="challenge-text">
-            <p class="challenge-line">Change is already happening — quietly.</p>
-            <p class="challenge-line">Across schools, reading is becoming less frequent, less engaging, and less meaningful for many students.</p>
-            <p class="challenge-line">This is not just about performance. It affects how students think, learn, and grow.</p>
-            <p class="challenge-line">We started by understanding this reality — not with assumptions, but by looking closely at what is actually happening in schools.</p>
-            <p class="challenge-line">And from there, a clear direction began to form:</p>
-
-            <div class="challenge-list">
-              <p class="challenge-point">A deeper understanding of reading challenges in Flemish secondary schools</p>
-              <p class="challenge-point">Goals grounded in real school improvement research</p>
-              <p class="challenge-point">Practical approaches: Self-Regulated Learning, Peer Tutoring, and Parental Involvement</p>
-              <p class="challenge-point">A phased plan that grows steadily over five years</p>
-              <p class="challenge-point">Ready-to-use tools, templates, and guides for immediate use</p>
-            </div>
-
-            <p class="challenge-line">We are not here to prescribe solutions.</p>
-            <p class="challenge-line">We are here to support schools with the knowledge, tools, and confidence to shape change in their own way.</p>
-          </div>
-
-          <div class="challenge-image">
-            <img src="boy-two-girls-sitting-floor-reading-books.jpg" alt="Students reading in a classroom">
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="reveal">
       <div class="container">
         <h2>Explore the site</h2>
@@ -971,10 +868,10 @@
   </main>
 
   <footer>
-    Project: Reading Literacy in Antwerp 2026 • Team 6 • Vrije Universiteit Brussel
+    Project: Reading Literacy in Antwerp 2026 - Team 6 - Vrije Universiteit Brussel
   </footer>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">â†‘</button>
 
   <script>
     const tabButtons = document.querySelectorAll(".tab-btn");
@@ -1065,4 +962,6 @@
 
 
 }
+
+
 

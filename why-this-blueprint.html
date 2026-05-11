@@ -228,12 +228,12 @@
                             <source src="./new why this blue print.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <div id="video-overlay" class="overlay" role="button" tabindex="0" aria-label="Click to enable sound and play video">
-                            <button id="overlay-btn" class="overlay-button">Click to Enable Sound & Play</button>
+                        <div id="video-overlay" class="overlay" role="button" tabindex="0" aria-label="Play video silently">
+                            <button id="overlay-btn" class="overlay-button">Play Video</button>
                         </div>
                     </div>
 
-                    <button id="play-sound-btn" class="cta-button">Play Video With Sound</button>
+                    <button id="play-sound-btn" class="cta-button">Play Video</button>
                     <a href="./new why this blue print.mp4" target="_blank" rel="noopener" class="cta-button" style="display:block; text-align:center; text-decoration:none; margin-top:.8rem;">Open Video in New Tab</a>
 
                     <div class="copy-box">
@@ -259,9 +259,9 @@
                     overlay.setAttribute('aria-hidden', 'true');
                 }
 
-                video.defaultMuted = false;
-                video.muted = false;
-                video.volume = 1;
+                video.defaultMuted = true;
+                video.muted = true;
+                video.volume = 0;
 
                 try {
                     await video.play();

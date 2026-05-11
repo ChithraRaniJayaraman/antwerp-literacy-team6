@@ -1,132 +1,43 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roadmap | Reading Literacy in Antwerp 2026</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Marck+Script&display=swap');
-    :root{
-      --bg:#fffdf8;--bg2:#f7f0e1;--text:#1d2432;--primary:#2f6cb4;--primary2:#5fa7ff;--gold:#c79a45;--border:#eadfc8;--muted:#5e6877;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family:"Marck Script", "Brush Script MT", cursive;color:var(--text);
-      background:radial-gradient(circle at top left, rgba(255,236,177,.48), transparent 24%),radial-gradient(circle at top right, rgba(255,182,145,.18), transparent 22%),radial-gradient(circle at bottom left, rgba(157,203,255,.16), transparent 24%),linear-gradient(180deg,var(--bg),var(--bg2));
-      line-height:1.65;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+    :root{--bg:#f9f6ef;--bg-2:#f6f0e3;--text:#1d2432;--primary:#173e75;--primary-2:#2f7dbd;--surface:rgba(255,252,246,.92);--muted:#5e6877;--border:#e6dcc9;--gold-1:#f6de9e;--gold-2:#c79a45;}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+    body{font-family:"Cormorant Garamond","Palatino Linotype",serif;color:var(--text);background:radial-gradient(circle at top left, rgba(255,236,177,.5), transparent 24%),radial-gradient(circle at top right, rgba(255,180,140,.22), transparent 22%),radial-gradient(circle at bottom left, rgba(157,203,255,.18), transparent 24%),linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);line-height:1.65}
     .container{width:min(1120px,92vw);margin:0 auto}
-    .topbar{position:sticky;top:0;z-index:10;background:linear-gradient(90deg,rgba(14,28,50,.94),rgba(118,72,8,.86));border-bottom:1px solid rgba(255,233,170,.28)}
-    .topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 0;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:.7rem;color:#fff4cf;font-family:"Cinzel",serif;text-shadow:0 2px 10px rgba(0,0,0,.34)}
-    .brand img{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(0,0,0,.22))}
-    .menu{display:flex;flex-wrap:wrap;gap:.5rem}
-    .menu a{color:#fff;text-decoration:none;border:1px solid rgba(255,240,184,.34);background:linear-gradient(135deg,#6e4300,#c79a45 46%,#ffe6a6);border-radius:999px;padding:.42rem .95rem;font-family:"Cinzel",serif;box-shadow:0 10px 22px rgba(12,18,29,.22), inset 0 1px 0 rgba(255,255,255,.35)}
-    .menu a:hover{transform:translateY(-2px);box-shadow:0 14px 26px rgba(12,18,29,.28), 0 0 0 1px rgba(255,240,184,.18), inset 0 1px 0 rgba(255,255,255,.38);filter:brightness(1.1)}
-    .hero{padding:4.5rem 0 2rem;background:linear-gradient(135deg,rgba(12,24,42,.92),rgba(118,72,8,.78));color:#fff;text-align:center;position:relative;overflow:hidden}
-    .hero .container{background:linear-gradient(145deg,rgba(16,26,40,.78),rgba(109,72,18,.48));border:1px solid rgba(255,233,170,.28);border-radius:18px;padding:1.3rem}
+    .topbar{position:sticky;top:0;z-index:100;background:linear-gradient(90deg,rgba(14,28,50,.94),rgba(118,72,8,.86));border-bottom:1px solid rgba(246,222,158,.35);backdrop-filter:blur(7px)}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 0;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:.7rem;color:#fff4cf;font-family:"Cinzel",serif;letter-spacing:.3px;text-shadow:0 2px 10px rgba(0,0,0,.34)}.brand img{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(0,0,0,.22))}.menu{display:flex;flex-wrap:wrap;gap:.5rem}.menu a{color:#fff;text-decoration:none;border:1px solid rgba(255,240,184,.34);background:linear-gradient(135deg,#6e4300,#c79a45 46%,#ffe6a6);border-radius:999px;padding:.42rem .95rem;font-family:"Cinzel",serif;box-shadow:0 10px 22px rgba(12,18,29,.22), inset 0 1px 0 rgba(255,255,255,.35)}
+    .hero{padding:4.5rem 0 2rem;background:linear-gradient(135deg,rgba(12,24,42,.92),rgba(118,72,8,.78));color:#fff;text-align:center;position:relative;overflow:hidden}.hero .container{background:linear-gradient(145deg,rgba(16,26,40,.78),rgba(109,72,18,.48));border:1px solid rgba(255,233,170,.28);border-radius:18px;padding:1.3rem}
+    h1,h2,h3{font-family:"Cinzel",serif} h1{margin:.2rem 0 .8rem;font-size:clamp(2.3rem,5vw,4.4rem);color:#fffdf6;text-shadow:0 8px 24px rgba(0,0,0,.48),0 0 18px rgba(255,238,184,.32)}
     .lead{max-width:850px;margin:0 auto 1.2rem;text-align:center;color:#fff8e8;font-size:1.15rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.28)}
-    h1,h2,h3{font-family:"Cinzel",serif}
-    h1{margin:.2rem 0 .8rem;font-size:clamp(2.3rem,5vw,4.4rem);color:#fffdf6;text-shadow:0 8px 24px rgba(0,0,0,.48),0 0 18px rgba(255,238,184,.32)}
     .content{padding:3.5rem 0}
     .timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
-    .phase{background:linear-gradient(180deg,rgba(255,255,255,.99),rgba(250,244,232,.97));border:1px solid rgba(199,154,69,.22);border-radius:18px;padding:1.25rem;box-shadow:0 14px 30px rgba(30,36,48,.08);position:relative;overflow:hidden}
+    .phase{background:linear-gradient(145deg,rgba(255,252,246,.94),rgba(246,240,227,.88));border:1px solid var(--border);border-radius:22px;box-shadow:0 22px 60px rgba(32,45,70,.12);padding:1.4rem 1.3rem;position:relative;overflow:hidden}
     .phase::before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:5px;background:linear-gradient(90deg,#173e75,#c79a45,#8a5a44)}
     .phase-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .7rem;border-radius:999px;background:rgba(11,27,46,.08);color:#173e75;font-family:"Cinzel",serif;font-size:.82rem;letter-spacing:.3px;margin-bottom:.55rem}
-    .phase h3{margin:.15rem 0 .45rem;color:#17406f}
-    .phase small{color:var(--muted);display:block;margin-bottom:.9rem}
+    .phase h3{margin:.15rem 0 .45rem;color:#17406f}.phase small{color:var(--muted);display:block;margin-bottom:.9rem}
     .phase-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:.95rem 0 1rem}
     .metric{background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(250,244,232,.98));border:1px solid rgba(199,154,69,.18);border-radius:14px;padding:.8rem .85rem;box-shadow:0 10px 18px rgba(30,36,48,.07)}
-    .metric strong{display:block;font-size:1.45rem;line-height:1;color:#0f2f57}
-    .metric span{display:block;margin-top:.2rem;color:#465468;font-size:.92rem}
-    .phase-list{display:grid;gap:.5rem;margin:0;padding:0;list-style:none}
-    .phase-list li{position:relative;padding:.45rem .65rem .45rem 1.6rem;background:rgba(255,255,255,.72);border:1px solid rgba(199,154,69,.12);border-radius:12px;color:#243243;box-shadow:inset 0 1px 0 rgba(255,255,255,.58)}
-    .phase-list li::before{content:"-";position:absolute;left:.55rem;top:.35rem;color:#c79a45;font-size:1.3rem;line-height:1}
-    .back{display:inline-block;margin-top:1rem;text-decoration:none;color:#6f4300;background:linear-gradient(135deg,#fffdf8,#ffe6a6,#ffd0b3);padding:.6rem 1rem;border-radius:999px;font-family:"Cinzel",serif;box-shadow:0 12px 22px rgba(199,154,69,.16)}
+    .metric strong{display:block;font-size:1.45rem;line-height:1;color:#0f2f57}.metric span{display:block;margin-top:.2rem;color:#465468;font-size:.92rem}
+    .phase-list{display:grid;gap:.5rem;margin:0;padding:0;list-style:none}.phase-list li{position:relative;padding:.45rem .65rem .45rem 1.6rem;background:rgba(255,255,255,.72);border:1px solid rgba(199,154,69,.12);border-radius:12px;color:#243243;box-shadow:inset 0 1px 0 rgba(255,255,255,.58)}.phase-list li::before{content:"-";position:absolute;left:.55rem;top:.35rem;color:#c79a45;font-size:1.3rem;line-height:1}
+    .back{display:inline-block;margin-top:1rem;text-decoration:none;color:#fff;background:linear-gradient(135deg,#7a4a00,#c79a45 50%,#ffe6a6);padding:.6rem 1rem;border-radius:999px;font-family:"Cinzel",serif;box-shadow:0 12px 22px rgba(12,18,29,.22), inset 0 1px 0 rgba(255,255,255,.35)}
     footer{padding:2rem 0;text-align:center;color:var(--muted)}
     @media(max-width:900px){.timeline{grid-template-columns:1fr}.phase-metrics{grid-template-columns:1fr}}
   </style>
-  <style>
-    .topbar{background:linear-gradient(90deg,rgba(14,28,50,.94),rgba(118,72,8,.86))!important;border-bottom:1px solid rgba(255,233,170,.28)!important}.brand{color:#fff4cf!important;text-shadow:0 2px 10px rgba(0,0,0,.34)!important}.menu a{color:#fff!important;background:linear-gradient(135deg,#6e4300,#c79a45 46%,#ffe6a6)!important;border:1px solid rgba(255,240,184,.34)!important;box-shadow:0 10px 22px rgba(12,18,29,.22), inset 0 1px 0 rgba(255,255,255,.35)!important}.menu a:hover{transform:translateY(-2px) scale(1.02)!important;box-shadow:0 14px 26px rgba(12,18,29,.28), 0 0 0 1px rgba(255,240,184,.18), inset 0 1px 0 rgba(255,255,255,.38)!important;filter:brightness(1.1)!important}.hero{background:linear-gradient(135deg,rgba(12,24,42,.92),rgba(118,72,8,.78))!important;color:#fff!important}.hero .container{background:linear-gradient(145deg,rgba(16,26,40,.78),rgba(109,72,18,.48))!important;border:1px solid rgba(255,233,170,.28)!important;box-shadow:0 12px 28px rgba(0,0,0,.18)!important}.hero h1,.hero .lead,h1,h2,h3,.lead,.phase h3,.phase p,.phase li{color:#fffdf6!important;text-shadow:0 4px 14px rgba(0,0,0,.42)!important}.lead,.phase p,.phase li{color:#fff8e8!important}.phase{background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,239,223,.96))!important;border-color:rgba(199,154,69,.22)!important;box-shadow:0 14px 30px rgba(30,36,48,.12)!important}.phase h3,.phase small,.phase-list li,.metric span{color:#16283f!important;text-shadow:none!important}.back{background:linear-gradient(135deg,#7a4a00,#c79a45 50%,#ffe6a6)!important;color:#fff!important;border:1px solid rgba(255,240,184,.34)!important;box-shadow:0 12px 22px rgba(12,18,29,.22), inset 0 1px 0 rgba(255,255,255,.35)!important}.back:hover{transform:translateY(-2px) scale(1.02)!important;filter:brightness(1.08)!important}
-  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand"><img src="F_ READING LITERACY LOGO.jpeg" alt="Team 6 logo"><span>Reading Literacy in Antwerp 2026 - Team 6</span></div>
-      <nav class="menu" aria-label="Main">
-        <a href="index.html">Home</a><a href="why-this-blueprint.html">Why This Blueprint</a><a href="problem.html">Problem</a><a href="strategies.html">Strategies</a><a href="roadmap.html">Roadmap</a><a href="toolkit.html">Toolkit</a><a href="team.html">Team</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Roadmap</h1>
-      <p class="lead">A five-year implementation plan: pilot, scale, then sustain.</p>
-    </div>
-  </section>
-
-  <main class="content">
-    <div class="container">
-      <div class="timeline">
-        <article class="phase">
-          <div class="phase-badge">Pilot stage</div>
-          <h3>Phase 1</h3>
-          <small>Year 1 - Pilot and Build Foundation</small>
-          <div class="phase-metrics">
-            <div class="metric"><strong>1</strong><span>coordinator per pilot cluster</span></div>
-            <div class="metric"><strong>2</strong><span>core training moments</span></div>
-          </div>
-          <ul class="phase-list">
-            <li>Select pilot schools.</li>
-            <li>Assign a reading coordinator.</li>
-            <li>Train the first group of teachers.</li>
-            <li>Run the reading-interest survey.</li>
-            <li>Begin peer tutoring and one family evening.</li>
-          </ul>
-        </article>
-
-        <article class="phase">
-          <div class="phase-badge">Expansion stage</div>
-          <h3>Phase 2</h3>
-          <small>Years 2-3 - Scale and Embed</small>
-          <div class="phase-metrics">
-            <div class="metric"><strong>All</strong><span>schools in the network</span></div>
-            <div class="metric"><strong>Daily</strong><span>reading time embedded</span></div>
-          </div>
-          <ul class="phase-list">
-            <li>Expand to all schools.</li>
-            <li>Use pilot teachers as trainers.</li>
-            <li>Set daily reading time.</li>
-            <li>Host regular family evenings.</li>
-            <li>Track progress with student and teacher tools.</li>
-          </ul>
-        </article>
-
-        <article class="phase">
-          <div class="phase-badge">Sustain stage</div>
-          <h3>Phase 3</h3>
-          <small>Years 4-5 - Sustain and Institutionalize</small>
-          <div class="phase-metrics">
-            <div class="metric"><strong>Long</strong><span>term improvement plan</span></div>
-            <div class="metric"><strong>Train</strong><span>internal leadership</span></div>
-          </div>
-          <ul class="phase-list">
-            <li>Embed reading in improvement plans.</li>
-            <li>Integrate strategies into onboarding.</li>
-            <li>Use experienced teachers as internal trainers.</li>
-            <li>Keep tracking equity and engagement.</li>
-            <li>Celebrate milestones.</li>
-          </ul>
-        </article>
-      </div>
-
-      <div style="text-align:center;"><a class="back" href="toolkit.html">Next: Toolkit</a></div>
-    </div>
-  </main>
-
+  <header class="topbar"><div class="container topbar-inner"><div class="brand"><img src="F_ READING LITERACY LOGO.jpeg" alt="Team 6 logo"><span>Reading Literacy in Antwerp 2026 - Team 6</span></div><nav class="menu" aria-label="Main"><a href="index.html">Home</a><a href="why-this-blueprint.html">Why This Blueprint</a><a href="problem.html">Problem</a><a href="strategies.html">Strategies</a><a href="roadmap.html">Roadmap</a><a href="toolkit.html">Toolkit</a><a href="team.html">Team</a></nav></div></header>
+  <section class="hero"><div class="container"><h1>Roadmap</h1><p class="lead">A five-year implementation plan: pilot, scale, then sustain.</p></div></section>
+  <main class="content"><div class="container"><div class="timeline">
+    <article class="phase"><div class="phase-badge">Pilot stage</div><h3>Phase 1</h3><small>Year 1 - Pilot and Build Foundation</small><div class="phase-metrics"><div class="metric"><strong>1</strong><span>coordinator per pilot cluster</span></div><div class="metric"><strong>2</strong><span>core training moments</span></div></div><ul class="phase-list"><li>Select pilot schools.</li><li>Assign a reading coordinator.</li><li>Train the first group of teachers.</li><li>Run the reading-interest survey.</li><li>Begin peer tutoring and one family evening.</li></ul></article>
+    <article class="phase"><div class="phase-badge">Expansion stage</div><h3>Phase 2</h3><small>Years 2-3 - Scale and Embed</small><div class="phase-metrics"><div class="metric"><strong>All</strong><span>schools in the network</span></div><div class="metric"><strong>Daily</strong><span>reading time embedded</span></div></div><ul class="phase-list"><li>Expand to all schools.</li><li>Use pilot teachers as trainers.</li><li>Set daily reading time.</li><li>Host regular family evenings.</li><li>Track progress with student and teacher tools.</li></ul></article>
+    <article class="phase"><div class="phase-badge">Sustain stage</div><h3>Phase 3</h3><small>Years 4-5 - Sustain and Institutionalize</small><div class="phase-metrics"><div class="metric"><strong>Long</strong><span>term improvement plan</span></div><div class="metric"><strong>Train</strong><span>internal leadership</span></div></div><ul class="phase-list"><li>Embed reading in improvement plans.</li><li>Integrate strategies into onboarding.</li><li>Use experienced teachers as internal trainers.</li><li>Keep tracking equity and engagement.</li><li>Celebrate milestones.</li></ul></article>
+  </div><div style="text-align:center;"><a class="back" href="toolkit.html">Next: Toolkit</a></div></div></main>
   <footer>Reading Literacy in Antwerp 2026 - Team 6</footer>
 </body>
 </html>
-

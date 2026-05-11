@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why This Blueprint</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .container { background: white; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); max-width: 900px; width: 100%; overflow: hidden; }
+        .content { padding: 40px; }
+        h1 { color: #333; margin-bottom: 20px; font-size: 2.5em; }
+        .video-wrapper { position: relative; margin: 30px 0; background: #000; border-radius: 8px; overflow: hidden; }
+        video { width: 100%; display: block; }
+        .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 10; }
+        .overlay-button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
+        .overlay-button:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6); }
+        .cta-button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 18px 40px; font-size: 1.1em; border-radius: 50px; cursor: pointer; margin-top: 20px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); width: 100%; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6); }
+        p { color: #666; line-height: 1.8; margin-bottom: 15px; }
+        .description { margin-top: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Why This Blueprint?</h1>
+            <div class="video-wrapper">
+                <video id="blueprint-video" controls playsinline preload="metadata" muted width="100%">
+                    <source src="./new why this blue print.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="video-overlay" class="overlay" role="button" tabindex="0" aria-label="Click to enable sound and play video">
+                    <button id="overlay-btn" class="overlay-button">Click to Enable Sound & Play</button>
+                </div>
+            </div>
+            <button id="play-sound-btn" class="cta-button">Play Video With Sound</button>
+            <div class="description">
+                <p><strong>A Vision for Reading Literacy in Flemish Secondary Schools</strong></p>
+                <p>This blueprint outlines our comprehensive strategy for improving reading literacy across Flemish secondary education. Watch the video to understand the key elements, evidence-based approaches, and implementation framework.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            const video = document.getElementById('blueprint-video');
+            const playButton = document.getElementById('play-sound-btn');
+            const overlay = document.getElementById('video-overlay');
+            const overlayBtn = document.getElementById('overlay-btn');
+            const enableSoundAndPlay = async () => {
+                video.defaultMuted = false;
+                video.muted = false;
+                video.volume = 1;
+                try { await video.play(); } catch (_) {}
+                if (overlay) {
+                    overlay.style.display = 'none';
+                    overlay.setAttribute('aria-hidden', 'true');
+                }
+            };
+            if (playButton) playButton.addEventListener('click', enableSoundAndPlay);
+            if (overlayBtn) overlayBtn.addEventListener('click', enableSoundAndPlay);
+        }());
+    </script>
+</body>
+</html>

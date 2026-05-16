@@ -22,6 +22,7 @@
     .tabs{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:1rem 0 1.5rem}.tab-btn{border:1px solid rgba(199,154,69,.24);background:linear-gradient(135deg,#fffdf8,#fff0cf);color:#7a4300;border-radius:999px;padding:.65rem 1rem;cursor:pointer;font-weight:700;font-family:"Cinzel",serif}.tab-btn.active{background:linear-gradient(135deg,#173e75,#2f7dbd);color:#fff}
     .tab-panel{display:none}.tab-panel.active{display:block}
     .tab-panel p{color:#243243}
+    .tab-panel video{width:100%;margin-top:1rem;border-radius:16px;border:1px solid var(--border);box-shadow:0 14px 34px rgba(32,45,70,.14);background:#000}
     .back{display:inline-block;margin-top:1rem;text-decoration:none;color:#fff;background:linear-gradient(135deg,#7a4a00,#c79a45 50%,#ffe6a6);padding:.6rem 1rem;border-radius:999px;font-family:"Cinzel",serif;box-shadow:0 12px 22px rgba(12,18,29,.22), inset 0 1px 0 rgba(255,255,255,.35)}
     footer{padding:2rem 0;text-align:center;color:var(--muted)}
     @media(max-width:900px){.grid{grid-template-columns:1fr}}
@@ -34,7 +35,7 @@
 <div class="tabs" role="tablist" aria-label="Approaches"><button class="tab-btn active" data-tab="srl">Self-Regulated Learning</button><button class="tab-btn" data-tab="peer">Peer Tutoring</button><button class="tab-btn" data-tab="family">Parental Involvement</button></div>
 <article class="card tab-panel active" id="srl"><h3>Approach 1: Students take the wheel</h3><p>Students choose what to read, set goals, track their progress, and reflect on what they discover.</p></article>
 <article class="card tab-panel" id="peer"><h3>Approach 2: Reading together</h3><p>Older students read with younger ones, classmates work in pairs, and peers discuss meaning together.</p></article>
-<article class="card tab-panel" id="family"><h3>Approach 3: Families as reading partners</h3><p>Family involvement increases motivation and makes reading feel like part of life, not only school.</p></article>
+<article class="card tab-panel" id="family"><h3>Approach 3: Families as reading partners</h3><p>Family involvement increases motivation and makes reading feel like part of life, not only school.</p><video controls preload="metadata"><source src="SECI model.mp4" type="video/mp4">Your browser does not support the video tag.</video></article>
 <div style="text-align:center;"><a class="back" href="roadmap.html">Next: Roadmap</a></div></div></main>
 <footer>Reading Literacy in Antwerp 2026 - Team 6</footer>
 <script>const b=document.querySelectorAll('.tab-btn'),p=document.querySelectorAll('.tab-panel');b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.classList.remove('active'));p.forEach(y=>y.classList.remove('active'));x.classList.add('active');document.getElementById(x.dataset.tab).classList.add('active')}));</script>
